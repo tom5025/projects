@@ -1,0 +1,44 @@
+a.support
+{
+	text-decoration:none;
+	font-size:1em;
+	color:#5CB3ED;
+}
+
+a.support:hover
+{
+	color:#B2BABF;
+}
+
+/*#win
+{
+	list-style-image:url('images/windowsIcon.png');
+}
+
+#mac
+{
+	list-style-image:url('images/macIcon.png');
+}*/
+
+li
+{
+	list-style-type: none;
+}
+
+#supportMail
+{
+	color:#5CB3ED;
+	font-size:2em;
+	text-decoration:none;
+}
+
+#supportMail:hover
+{
+	color:#B2BABF;
+}
+
+#tel
+{
+	color:#000;
+	font-size:3em;
+}

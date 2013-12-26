@@ -1,0 +1,7 @@
+Prévisions changements CO_MechaniC Project :
+
+- Implémentation du système de départ à heure spécifique sur CO_MechaniC 
+- Implémentation d'un système de réglage des ratios décisionnels sur CO_TradE
+- Mise en place du système sans internet explorer sur CO_TradE et CO_MechaniC
+- Mise en place d'une MM100 réglée sur 1 minute sur CO_TradE
+- Mise en place d'un système multi-captures dans la version 4.0 de CO_MechaniC

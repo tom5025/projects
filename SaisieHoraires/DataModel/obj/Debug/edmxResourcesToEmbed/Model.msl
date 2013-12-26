@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="ModelContainer">
+    <EntitySetMapping Name="TimeEntrySet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.TimeEntry)">
+        <MappingFragment StoreEntitySet="TimeEntrySet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TheDate" ColumnName="TheDate" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsersSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.Users)">
+        <MappingFragment StoreEntitySet="UsersSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,5 @@
+-------------- CO Trade 3.0a -------
+
+- Abandon total de l'utilisation d'Internet Explorer pour récupérer les données
+
+-----------------------------------------

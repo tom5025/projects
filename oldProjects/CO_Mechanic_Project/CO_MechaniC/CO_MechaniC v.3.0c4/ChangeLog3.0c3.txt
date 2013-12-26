@@ -1,0 +1,5 @@
+---------------- CO MechaniC 3.0c3 -------------------
+
+- Formattage de la donnée dernier au format 0.00 (ancien format : 0,00)
+
+-----------------------------------------------------

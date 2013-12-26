@@ -1,0 +1,5 @@
+----------- CO Trade 2.0g ------------
+
+- Formattage DVol. rouge/vert - gras et gras si valeur = 0
+
+--------------------------------------

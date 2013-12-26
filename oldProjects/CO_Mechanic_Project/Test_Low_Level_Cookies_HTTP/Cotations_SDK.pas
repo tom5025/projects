@@ -1,0 +1,251 @@
+unit Cotations_SDK;
+
+interface
+
+uses Winsock,windows,sysutils,FonctionChaines;
+
+
+function _Login():string;
+function _Refresh(rga:string;InCookies:string;var OutCookies:string):string;
+
+implementation
+
+const
+  crlf=#13#10;
+//----Tools-------
+
+{
+  But: obtenir l'adresse IP d'un serveur à partir de sa DNS
+  Résultat: addresse ip sous la forme xxx.xxx.xxx.xxx
+  Paramètres:
+    hn = DNS du serveur
+}
+
+function LookupHostAddr(const hn: string): string;
+var
+  h: PHostEnt;
+begin
+  Result := '';
+  if hn <> '' then
+  begin
+    if hn[1] in ['0'..'9'] then
+    begin
+      if inet_addr(pchar(hn)) <> INADDR_NONE then
+        Result := hn;
+    end
+    else
+    begin
+      h := gethostbyname(pchar(hn));
+      if h <> nil then
+        with h^ do
+        Result := format('%d.%d.%d.%d', [ord(h_addr^[0]), ord(h_addr^[1]),
+      		  ord(h_addr^[2]), ord(h_addr^[3])]);
+    end;
+  end
+  else Result := '0.0.0.0';
+end;
+
+{
+  But: virer les infos de chaque chunk dans une réponse HTTP 1.1 avec header
+  Résultat: réponse HTTP 1.1 unchunkée
+  Paramètres:
+    DataIn = réponse HTTP avec header
+}
+
+function UnChunkData(DataIn:string):string;
+var
+  NewData:string;
+  size,inc:integer;
+begin
+  //Jump out the header + double crlf
+  inc:=1;
+  NewData:=droite(crlf+crlf,datain);
+  repeat
+    //Get the current chunck with all the rest of the data
+    size:=strtoint('$'+uppercase(gauche(#13#10,copy(NewData,inc,length(newdata)))));
+    //read size data in current data
+    result:=result+copy(copy(NewData,inc,length(newdata)),length(gauche(crlf,copy(NewData,inc,length(newdata)))+crlf)+1,size);
+    inc:=inc+size+length(crlf+gauche(crlf,copy(NewData,inc,length(newdata)))+crlf);
+  until inc>=length(NewData)-1;
+end;
+
+//-----Functions-------
+
+{
+ But : Raffraîchir la page du code RGA spécifié
+ Résultat : contenu de la page
+ Paramètres :
+   - RGA : code RGA concerné
+   - InCookies : Cookies obtenu lors du login ou du raffraichissement de la page
+   - OutCookies: Nouveaux cookies obtenus lors du raffraichissement de la page
+}
+
+
+
+function _Refresh(rga:string;InCookies:string;var OutCookies:string):string;
+var
+  WSAData:TWsaData;
+  uSocket:u_int;
+  Host:TSockAddrIn;
+  DataOut,DataIn:string;
+  Buffer:array [0..1023] of char;
+  ret:integer;
+begin
+  //Start WSA dll
+  if WSAStartup(MAKEWORD(2,2),WSAData)<>0 then begin
+    MessageBox(0,PChar('Error on WSAStartup()'),Pchar('Error.'),0);
+    WSACleanup();
+    exit;
+  end;
+  //Create socket
+  uSocket:=Socket(AF_INET,SOCK_STREAM,0);
+  if uSocket=INVALID_SOCKET then begin
+    MessageBox(0,pchar('Error on Socket()'),PChar('Error.'),0);
+    closesocket(uSocket);
+    WSACleanup();
+    exit;
+  end;
+  //DNS lookup
+  Host.sin_family:=AF_INET;
+  Host.sin_addr.S_addr:=inet_addr(PChar(LookupHostAddr('www.cotations.com')));
+  Host.sin_port:=htons(80);
+  //Connect to the IP received by the DNS lookup
+  if Connect(uSocket,Host,sizeof(Host))=SOCKET_ERROR then begin
+    MessageBox(0,pchar('Error on connect()'),PChar('Error.'),0);
+    closesocket(uSocket);
+    WSACleanup();
+    exit;
+  end;
+
+  //Build Refresh request with cookies
+  DataIn:='';
+  DataOut:='GET /resultat_requete_cours_tempsreel.asp?VALEUR=13000 HTTP/1.1'+crlf+
+         'Accept: text/html'+crlf+
+         'User-Agent: Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 5.0)'+crlf+
+         'Host: www.cotations.com'+crlf+
+         'connection: close'+crlf+
+         'Cookie: '+InCookies+crlf+crlf;
+
+  //Send request
+  ret:=send(uSocket,DataOut[1],length(DataOut),0);
+  if (ret=SOCKET_ERROR) or (ret<>length(DataOut)) then begin
+    MessageBox(0,pchar('Error on send()'),PChar('Error.'),0);
+    closesocket(uSocket);
+    WSACleanup();
+    exit;
+  end;
+
+  //Receive request result
+  ret:=1;
+  ioctlsocket(uSocket,FIONBIO,ret);
+
+  //Receive HTTP Header
+  repeat
+    zeroMemory(@buffer,sizeof(buffer));
+    ret:=recv(uSocket,Buffer,sizeof(buffer),0);
+    if (ret<>0) and (ret<>SOCKET_ERROR) then
+      datain:=datain+buffer;
+      //messagebox(0,buffer,nil,0);
+  until (ret=0);
+
+
+
+
+  OutCookies:='';
+  //Parse for new cookies
+  for ret:=1 to NbSousChaine('Set-Cookie:',DataIn) do
+    OutCookies:=OutCookies+Gauche(';',NDroite('Set-Cookie: ',datain,ret))+'; ';
+  //Return the received result
+  result:=UnChunkData(DataIn);
+
+  //Free the socket
+  closesocket(uSocket);
+  wsacleanup();
+end;
+
+
+{
+ But : Se logguer sur www.cotations.com
+ Résultat : contenu de la page
+ Paramètres :
+   - Résultat : Cookies obtenus après login
+}
+
+function _Login():string;
+var
+  WSAData:TWSAData;
+  uSocket:u_int;
+  Host:TSockAddrIn;
+  DataOut,DataIn:string;
+  Buffer:array [0..4095] of char;
+  ret:integer;
+begin
+  //Start WSA dll
+  if WSAStartup(MAKEWORD(2,2),WSAData)<>0 then begin
+    MessageBox(0,PChar('Error on WSAStartup()'),Pchar('Error.'),0);
+    WSACleanup();
+    exit;
+  end;
+
+  //Create socket
+  uSocket:=Socket(AF_INET,SOCK_STREAM,0);
+  if uSocket=INVALID_SOCKET then begin
+    MessageBox(0,pchar('Error on Socket()'),PChar('Error.'),0);
+    closesocket(uSocket);
+    WSACleanup();
+    exit;
+  end;
+
+  //DNS lookup
+  Host.sin_family:=AF_INET;
+  Host.sin_addr.S_addr:=inet_addr(PChar(LookupHostAddr('www.cotations.com')));
+  Host.sin_port:=htons(80);
+
+  //Connect to the IP received by the DNS lookup
+  if Connect(uSocket,Host,sizeof(Host))=SOCKET_ERROR then begin
+    MessageBox(0,pchar('Error on connect()'),PChar('Error.'),0);
+    closesocket(uSocket);
+    WSACleanup();
+    exit;
+  end;
+
+  //1st Request
+  DataIn:='';
+  DataOut:='POST /index.asp HTTP/1.1'+crlf+
+           'Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, */*'+crlf+
+           'Content-Type: application/x-www-form-urlencoded'+crlf+
+           'User-Agent: Mozilla/3.0 (compatible)'+crlf+
+           'Host: www.cotations.com'+crlf+
+           'Content-Length: 29'+crlf+
+           'Connection: close'+crlf+
+           'user=gremy1&password=ymer21AM'+crlf+crlf;
+
+  //Send request
+  ret:=send(uSocket,DataOut[1],length(DataOut),0);
+  if (ret=SOCKET_ERROR) or (ret<>length(DataOut)) then begin
+    MessageBox(0,pchar('Error on send()'),PChar('Error.'),0);
+    closesocket(uSocket);
+    WSACleanup();
+    exit;
+  end;
+
+  //Receive request result
+  ret:=1;
+  ioctlsocket(uSocket,FIONBIO,ret);
+  repeat
+    zeroMemory(@buffer,sizeof(buffer));
+    ret:=recv(uSocket,Buffer,sizeof(buffer),0);
+    if (ret<>0) and (ret<>SOCKET_ERROR) then
+      datain:=datain+buffer;
+  until ret=0;
+
+  //Parse cookies in server's response to get them back to him in our next request
+  for ret:=1 to NbSousChaine('Set-Cookie:',DataIn) do
+    result:=result+Gauche(';',NDroite('Set-Cookie: ',datain,ret))+'; ';
+
+  //Free socket and close WSA dll
+  closesocket(uSocket);
+  WSACleanup();
+end;
+
+end.

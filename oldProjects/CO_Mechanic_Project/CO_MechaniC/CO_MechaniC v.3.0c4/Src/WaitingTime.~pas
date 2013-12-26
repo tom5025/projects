@@ -1,0 +1,42 @@
+unit WaitingTime;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls;
+
+type
+  TFrmWaitingTime = class(TForm)
+    gbWaitingTime: TGroupBox;
+    tbWaitingTime: TEdit;
+    btOk: TButton;
+    procedure FormShow(Sender: TObject);
+    procedure btOkClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmWaitingTime: TFrmWaitingTime;
+
+implementation
+
+uses Main;
+
+{$R *.dfm}
+
+procedure TFrmWaitingTime.FormShow(Sender: TObject);
+begin
+  tbWaitingTime.text:=inttostr(FrmMain.Params.iWaitingTime);
+end;
+
+procedure TFrmWaitingTime.btOkClick(Sender: TObject);
+begin
+  FrmMain.Params.iWaitingTime:=strtointdef(tbWaitingTime.Text,5);
+  close();
+end;
+
+end.

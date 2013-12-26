@@ -1,0 +1,17 @@
+program CO_Mechanic;
+
+uses
+  Forms,
+  Main in 'Main.pas' {FrmMain},
+  FonctionChaines in 'FonctionChaines.pas',
+  AboutBox in 'AboutBox.pas' {Form1};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.Title := 'CO MechaniC';
+  Application.CreateForm(TFrmMain, FrmMain);
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+end.

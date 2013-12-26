@@ -1,0 +1,103 @@
+Structure du fichier Base De Donnees de CO_MechaniC v4.0 :
+
+Enregistrement Date :
+
+type
+  TDateRec = record 
+    dwDay:DWORD;
+    dwMonth:DWORD;
+    dwYear:DWORD;
+    dwCaptureCount:DWord;
+  end;
+
+Enregistrement Minute :
+
+type
+  TMinuteRec = record
+    dwHour:dword;
+    dwMinute:dword;
+    dwHAPx5:float;
+    dwHANb5:DWORD;
+    dwHAQte5:DWORD;
+    
+    dwHAPx4:float;
+    dwHANb4:DWORD;
+    dwHAQte4:DWORD;
+    
+    dwHAPx3:float;
+    dwHANb3:DWORD;
+    dwHAQte3:DWORD;
+    
+    dwHAPx2:float;
+    dwHANb2:DWORD;
+    dwHAQte2:DWORD;
+
+    dwHAPx1:float;
+    dwHANb1:DWORD;
+    dwHAQte1:DWORD;
+
+    dwVTPx1:float;
+    dwVTNb1:DWORD;
+    dwVTQte1:DWORD;
+    
+    dwVTPx2:float;
+    dwVTNb2:DWORD;
+    dwVTQte2:DWORD;
+    
+    dwVTPx3:float;
+    dwVTNb3:DWORD;
+    dwVTQte3:DWORD;
+    
+    dwVTPx4:float;
+    dwVTNb4:DWORD;
+    dwVTQte4:DWORD;
+
+    dwVTPx5:float;
+    dwVTNb5:DWORD;
+    dwVTQte5:DWORD;
+  end;
+    
+
+Enregistrement Capture :
+
+type
+  TCaptureRec = record 
+    dwRGA:DWORD;
+    szTitre:string[20];
+    dwMinutesCount:DWORD;
+    aMinutes:array [0..dwMinutesCount] of TMinuteRec;
+  end;
+
+Structure Exemple :
+
+dwDatesCount
+ |  
+ |_ Date1
+    |_Capture1
+    |   *0..dwMinutesCount of TMinuteRec
+    |_Capture2
+    |   *0..dwMinutesCount of TMinuteRec
+    |_Capture3
+    |   *0..dwMinutesCount of TMinuteRec
+  Date2
+    |_Capture1
+    |   *0..dwMinutesCount of TMinuteRec
+    |_Capture2
+    |   *0..dwMinutesCount of TMinuteRec
+    |_Capture3
+    |   *0..dwMinutesCount of TMinuteRec
+  Date3
+    |_Capture1
+    |   *0..dwMinutesCount of TMinuteRec
+    |_Capture2
+    |   *0..dwMinutesCount of TMinuteRec
+    |_Capture3
+    |   *0..dwMinutesCount of TMinuteRec
+  END;
+
+  
+  
+  
+
+
+

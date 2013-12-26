@@ -1,0 +1,42 @@
+object FrmWaitingTime: TFrmWaitingTime
+  Left = 300
+  Top = 389
+  BorderStyle = bsToolWindow
+  Caption = 'Temps d'#39'attente apr'#232's refresh...'
+  ClientHeight = 42
+  ClientWidth = 203
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object gbWaitingTime: TGroupBox
+    Left = 0
+    Top = 0
+    Width = 203
+    Height = 42
+    Align = alClient
+    TabOrder = 0
+    object tbWaitingTime: TEdit
+      Left = 8
+      Top = 13
+      Width = 105
+      Height = 21
+      TabOrder = 0
+    end
+    object btOk: TButton
+      Left = 121
+      Top = 10
+      Width = 75
+      Height = 25
+      Caption = 'OK'
+      TabOrder = 1
+      OnClick = btOkClick
+    end
+  end
+end

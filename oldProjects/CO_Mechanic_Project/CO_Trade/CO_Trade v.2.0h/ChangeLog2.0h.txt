@@ -1,0 +1,6 @@
+----------- CO Trade 2.0h ------------
+
+- Résolution du problème de coloration de la colonne DVOL
+- Changement des ratios sur la fenêtre des résultats (nouveaux :  33.33%, 33.33%, 33.33% = 99.99%) 
+
+--------------------------------------

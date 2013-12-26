@@ -1,0 +1,63 @@
+unit ParamsDlg;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, ComCtrls;
+
+type
+  TFrmParams = class(TForm)
+    gbParams: TGroupBox;
+    StatusBar1: TStatusBar;
+    lblDelayLimit: TLabel;
+    lblTicksLimit: TLabel;
+    lblRGACode: TLabel;
+    lblStartup: TLabel;
+    lblCloseAtEnd: TLabel;
+    lblAutoSave: TLabel;
+    lblSaveFilename: TLabel;
+    procedure FormShow(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmParams: TFrmParams;
+
+implementation
+
+uses Main;
+
+{$R *.dfm}
+
+procedure TFrmParams.FormShow(Sender: TObject);
+begin
+  lblStartup.font.color:=clred;
+  lblStartup.Caption:='Parametres de demarrage : Non';
+  lblAutoSave.Font.Color:=clred;
+  lblAutoSave.Caption:='Auto-Save : Non';
+  lblCloseAtEnd.font.color:=clRed;
+  lblCloseAtEnd.Caption:='Fermer a la fin de la capture : Non';
+  lblSaveFilename.caption:='Chemin de sauvegarde : Aucun';
+  if ParamStr(1)='+StartupParams' then begin
+    lblStartup.Font.Color:=clGreen;
+    lblStartup.Caption:='Parametres de demarrage : Oui';
+  end;
+  if FrmMain.bAutoSave then begin
+    lblAutoSave.Font.Color:=clgreen;
+    lblAutoSave.Caption:='Auto-Save : Oui';
+  end;
+  if FrmMain.bCloseAtEnd then begin
+    lblCloseAtEnd.font.color:=clgreen;
+    lblCloseAtEnd.Caption:='Fermer a la fin de la capture : Oui';
+    lblSaveFilename.caption:=FrmMain.sSaveFilename;
+  end;
+  lblDelayLimit.caption:=inttostr(FrmMain.iDelayLimit);
+  lblTicksLimit.caption:=inttostr(FrmMain.iTicksLimit);
+  lblRGACode.caption:=inttostr(FrmMain.iRGACode);
+end;
+
+end.

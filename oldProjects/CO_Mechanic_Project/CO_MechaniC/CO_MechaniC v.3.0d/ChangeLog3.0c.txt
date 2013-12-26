@@ -1,0 +1,6 @@
+---------------- CO MechaniC 3.0c -------------------
+
+- Ajout d'une possibilitée de ne pas ajouter la donnée VOL à la case Q
+- Ajout de la prise en charge de l'arrêt à la seconde près
+
+-----------------------------------------------------

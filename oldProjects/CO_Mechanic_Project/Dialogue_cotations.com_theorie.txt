@@ -1,0 +1,189 @@
+//Dialogue théorique avec www.cotations.com :
+
+**CLIENT**//Première requête :
+// NOTA : orientation sur http://www.cotations.com/index.asp
+
+POST /index.asp HTTP/1.0 crlf
+Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, */* crlf
+Content-Type: application/x-www-form-urlencoded crlf
+User-Agent: Mozilla/3.0 (compatible) crlf
+Host: www.cotations.com crlf
+Content-Length: 29 crlf
+crlf 
+crlf
+user=gremy1&password=ymer21AM
+crlf
+crlf
+
+**SERVER**//Réponse première requête :
+// NOTA : redirection sur http://www.cotations.com/index2.asp
+
+HTTP/1.1 302 Object moved crlf
+Server: Microsoft-IIS/4.0 crlf
+Date: Mon, 20 Jan 2003 01:01:28 GMT crlf
+Location: index2.asp crlf
+Content-Type: text/html crlf
+Set-Cookie: IDUSR=P%5F%5F%5F2UNWTDezXvv71NZN%2DeDLiEptXkwC; path=/ crlf
+Set-Cookie: ASPSESSIONIDGGQGGQYE=CIJDJMBBIFKGKFKPNNEMDDIN; path=/ crlf
+Cache-control: private crlf
+crlf
+crlf
+
+**CLIENT**//Deuxième requête
+// NOTA : on ne procède pas à la redirection sur index2.asp car nous possédons les cookies nécessaires pour passer directement
+// à la page des résultats
+
+GET /resultat_requete_cours_tempsreel.asp?VALEUR=13000 HTTP/1.0 crlf
+Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, */* crlf
+User-Agent: Mozilla/3.0 (compatible) crlf
+Host: www.cotations.com crlf
+Cookie: IDUSR=P%5F%5F%5F2UNWTDezXvv71NZN%2DeDLiEptXkwC; ASPSESSIONIDGGQGGQYE=CIJDJMBBIFKGKFKPNNEMDDIN; crlf
+
+**SERVER**//Réponse deuxième requête
+// NOTA : ici le contenu de la page des résultats
+
+HTTP/1.1 200 OK
+Server: Microsoft-IIS/4.0
+Date: Mon, 20 Jan 2003 01:23:16 GMT
+Content-Type: text/html
+Set-Cookie: IDUSR=S%5F%5F%5F2Q4qR2JzffQ52KJpfJ%5FQ8BMpQfzI; path=/
+Cache-control: private
+
+**CLIENT**//Procédé de raffraichissement
+// NOTA : ici on envoie une nouvelle requête sur la page des résultats mais avec un nouveau IDUSR 
+
+GET /resultat_requete_cours_tempsreel.asp?VALEUR=13000 HTTP/1.0 crlf
+Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, */* crlf
+User-Agent: Mozilla/3.0 (compatible) crlf
+Host: www.cotations.com crlf
+Cookie: IDUSR=S%5F%5F%5F2Q4qR2JzffQ52KJpfJ%5FQ8BMpQfzI; ASPSESSIONIDGGQGGQYE=CIJDJMBBIFKGKFKPNNEMDDIN; crlf
+
+
+**ETC....**
+
+
+
+From FPiette component :
+
+
+POST /index.asp HTTP/1.0
+Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, */*
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/3.0 (compatible)
+Host: www.cotations.com
+Content-Length: 29
+
+user=gremy1&password=ymer21AM
+
+HTTP/1.1 302 Object moved
+Server: Microsoft-IIS/4.0
+Date: Tue, 21 Jan 2003 00:42:15 GMT
+Location: index2.asp
+Content-Type: text/html
+Set-Cookie: IDUSR=9g%5F%5FcNdMkNH%5FJmJx8ZfTnyJU%5FzXrL6ST; path=/
+Set-Cookie: ASPSESSIONIDGGGGGGDL=DKFECIMBDJCJHDAMNEEDEEEI; path=/
+Cache-control: private
+
+
+GET /index2.asp HTTP/1.0
+Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, */*
+User-Agent: Mozilla/3.0 (compatible)
+Host: www.cotations.com
+
+HTTP/1.1 302 Object moved
+Server: Microsoft-IIS/4.0
+Date: Tue, 21 Jan 2003 00:42:16 GMT
+Location: index.asp?Err=Veuillez+vous+identifier
+Content-Type: text/html
+Set-Cookie: ASPSESSIONIDGGGGGGDL=EKFECIMBFCFGLOJMLJGIHIHI; path=/
+Cache-control: private
+
+
+GET /index.asp?Err=Veuillez+vous+identifier HTTP/1.0
+Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, */*
+User-Agent: Mozilla/3.0 (compatible)
+Host: www.cotations.com
+
+HTTP/1.1 200 OK
+Server: Microsoft-IIS/4.0
+Date: Tue, 21 Jan 2003 00:42:16 GMT
+Content-Type: text/html
+Set-Cookie: ASPSESSIONIDGGGGGGDL=FKFECIMBFKHNDABGENANGAJI; path=/
+Cache-control: private
+
+
+GET /resultat_requete_cours_tempsreel.asp?VALEUR=13000 HTTP/1.0
+Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, */*
+User-Agent: Mozilla/3.0 (compatible)
+Host: www.cotations.com
+Cookie:  IDUSR=9g%5F%5FcNdMkNH%5FJmJx8ZfTnyJU%5FzXrL6ST; ASPSESSIONIDGGGGGGDL=DKFECIMBDJCJHDAMNEEDEEEI; ASPSESSIONIDGGGGGGDL=EKFECIMBFCFGLOJMLJGIHIHI; ASPSESSIONIDGGGGGGDL=FKFECIMBFKHNDABGENANGAJI;
+
+HTTP/1.1 200 OK
+Server: Microsoft-IIS/4.0
+Date: Tue, 21 Jan 2003 00:42:16 GMT
+Content-Type: text/html
+Set-Cookie: IDUSR=ag%5F%5FcN%2DrF%5FGmTnvZPiD%2DxN9msVb4R1S%2D; path=/
+Cache-control: private
+
+
+POST /index.asp HTTP/1.0
+Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, */*
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/3.0 (compatible)
+Host: www.cotations.com
+Content-Length: 29
+Cookie:  IDUSR=9g%5F%5FcNdMkNH%5FJmJx8ZfTnyJU%5FzXrL6ST; ASPSESSIONIDGGGGGGDL=DKFECIMBDJCJHDAMNEEDEEEI; ASPSESSIONIDGGGGGGDL=EKFECIMBFCFGLOJMLJGIHIHI; ASPSESSIONIDGGGGGGDL=FKFECIMBFKHNDABGENANGAJI;
+
+HTTP/1.1 302 Object moved
+Server: Microsoft-IIS/4.0
+Date: Tue, 21 Jan 2003 00:43:07 GMT
+Location: index2.asp
+Content-Type: text/html
+Set-Cookie: IDUSR=bg%5F%5Fcu9py6dhL6q7RYxVaRa%2D%5Fha4jxUt; path=/
+Cache-control: private
+
+
+GET /index2.asp HTTP/1.0
+Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, */*
+User-Agent: Mozilla/3.0 (compatible)
+Host: www.cotations.com
+Cookie:  IDUSR=9g%5F%5FcNdMkNH%5FJmJx8ZfTnyJU%5FzXrL6ST; ASPSESSIONIDGGGGGGDL=DKFECIMBDJCJHDAMNEEDEEEI; ASPSESSIONIDGGGGGGDL=EKFECIMBFCFGLOJMLJGIHIHI; ASPSESSIONIDGGGGGGDL=FKFECIMBFKHNDABGENANGAJI;
+
+HTTP/1.1 302 Object moved
+Server: Microsoft-IIS/4.0
+Date: Tue, 21 Jan 2003 00:43:07 GMT
+Location: index.asp?Err=Aucune+session+d%E9finie%2E
+Content-Type: text/html
+Set-Cookie: IDUSR=; path=/
+Cache-control: private
+
+
+GET /index.asp?Err=Aucune+session+d%E9finie%2E HTTP/1.0
+Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, */*
+User-Agent: Mozilla/3.0 (compatible)
+Host: www.cotations.com
+Cookie:  IDUSR=9g%5F%5FcNdMkNH%5FJmJx8ZfTnyJU%5FzXrL6ST; ASPSESSIONIDGGGGGGDL=DKFECIMBDJCJHDAMNEEDEEEI; ASPSESSIONIDGGGGGGDL=EKFECIMBFCFGLOJMLJGIHIHI; ASPSESSIONIDGGGGGGDL=FKFECIMBFKHNDABGENANGAJI;
+
+HTTP/1.1 200 OK
+Server: Microsoft-IIS/4.0
+Date: Tue, 21 Jan 2003 00:43:07 GMT
+Content-Type: text/html
+Cache-control: private
+
+
+GET /resultat_requete_cours_tempsreel.asp?VALEUR=13000 HTTP/1.0
+Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, */*
+User-Agent: Mozilla/3.0 (compatible)
+Host: www.cotations.com
+Cookie:  IDUSR=bg%5F%5Fcu9py6dhL6q7RYxVaRa%2D%5Fha4jxUt; IDUSR=;
+
+HTTP/1.1 200 OK
+Server: Microsoft-IIS/4.0
+Date: Tue, 21 Jan 2003 00:43:08 GMT
+Content-Type: text/html
+Set-Cookie: IDUSR=cg%5F%5FcCksWMj9ROFJlJDDej7o8XfZyoUY; path=/
+Set-Cookie: ASPSESSIONIDGGGGGGDL=GKFECIMBCKNCCKBOLMFIEHKK; path=/
+Cache-control: private
+
+
+

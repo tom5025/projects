@@ -1,0 +1,7 @@
+-------------- CO Trade 3.0a -------
+
+- Deuxième essai d'implémentation du système de cookies pour récupérer les données. (Note : maintenant le programme se logue une fois sur www.cotations.com, et après il n'a plus qu'à raffraîchir sur le code RGA voulu)
+- Système de réglage des ratios par fichier INI
+- 
+
+-----------------------------------------
