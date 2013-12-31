@@ -45,7 +45,10 @@
   </xs:element>
   <xs:element name="GetEntries">
     <xs:complexType>
-      <xs:sequence />
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AFromDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="AToDate" type="xs:dateTime" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetEntriesResponse">

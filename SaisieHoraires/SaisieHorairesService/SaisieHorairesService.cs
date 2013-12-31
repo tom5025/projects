@@ -53,6 +53,7 @@ namespace SaisieHorairesService
                 ret.TheDate = entity.TheDate;
                 ret.StartTime = entity.StartTime;
                 ret.EndTime = entity.EndTime;
+                ret.SumTime = entity.SumTime;
                 return ret;
             }                
             else
@@ -99,7 +100,7 @@ namespace SaisieHorairesService
             }
         }
 
-        public List<TimeEntryDataContract> GetEntries()
+        public List<TimeEntryDataContract> GetEntries(DateTime AFromDate, DateTime AToDate)
         {
             if (context == null)
             {
@@ -108,7 +109,11 @@ namespace SaisieHorairesService
 
             List<TimeEntryDataContract> resList = new List<TimeEntryDataContract>();         
 
-            List<TimeEntry> efList = new List<TimeEntry>(from t in context.TimeEntrySet select t);
+            List<TimeEntry> efList = new List<TimeEntry>(from t in context.TimeEntrySet 
+                                                         where DbFunctions.TruncateTime(t.TheDate) >= DbFunctions.TruncateTime(AFromDate) &&
+                                                               DbFunctions.TruncateTime(t.TheDate) <= DbFunctions.TruncateTime(AToDate)
+                                                         select t);
+            efList.Sort((entry1, entry2) => entry1.TheDate.CompareTo(entry2.TheDate));
 
             foreach (TimeEntry cur in efList)
             {
@@ -116,6 +121,7 @@ namespace SaisieHorairesService
                 newItem.TheDate = cur.TheDate;
                 newItem.StartTime = cur.StartTime;
                 newItem.EndTime = cur.EndTime;
+                newItem.SumTime = cur.SumTime;
                 resList.Add(newItem);
             }
 

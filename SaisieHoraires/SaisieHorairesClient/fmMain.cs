@@ -19,20 +19,6 @@ namespace SaisieHorairesClient
             InitializeComponent();
         }
 
-
-        private decimal TimeToDec(decimal inValue)
-        {
-            //1.30 -> 1.00
-            decimal hourPart = decimal.Truncate(inValue);
-            //1.30 -> 0.30
-            decimal decPart = inValue - hourPart;
-
-            decPart = ((decPart * 100) * 60 / 100) / 100;
-
-            return hourPart + decPart;
-        } 
-
-
         private void btAdd_Click(object sender, EventArgs e)
         {
             btAdd.Enabled = false;
@@ -72,9 +58,6 @@ namespace SaisieHorairesClient
                 decimal.TryParse(sStartTime, out valStartTime);
                 decimal.TryParse(sEndTime, out valEndTime);
 
-                /*valEndTime = TimeToDec(valEndTime);
-                valStartTime = TimeToDec(valStartTime);*/
-
                 cli.AddNewTimeEntry(dtpTheDate.Value, valStartTime, valEndTime);
                 MessageBox.Show("Entrée ajoutée avec succès.");
             }
@@ -95,7 +78,7 @@ namespace SaisieHorairesClient
 
         private void listeDesSaisiesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form1 newFm = new Form1();
+            fmList newFm = new fmList();
             newFm.Show(this);
 
         }

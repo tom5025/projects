@@ -11,6 +11,8 @@ namespace DataModel
 {
     using System;
     using System.Collections.Generic;
+    using CommonSaisieHoraires;
+using System.ComponentModel.DataAnnotations.Schema;
     
     public partial class TimeEntry
     {
@@ -18,5 +20,23 @@ namespace DataModel
         public System.DateTime TheDate { get; set; }
         public decimal StartTime { get; set; }
         public decimal EndTime { get; set; }
+
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+        public decimal SumTime {
+            get
+            {
+                if (EndTime == 0)
+                {
+                    return StartTime;
+                }
+                else
+                {
+                    return SaisieHorairesTools.DecToSexag(
+                                SaisieHorairesTools.SexagToDec(EndTime) - 
+                                SaisieHorairesTools.SexagToDec(StartTime));
+                }
+            }
+            private set { }
+        }
     }
 }

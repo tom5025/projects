@@ -18,7 +18,7 @@ namespace SaisieHorairesService
         [OperationContract]
         bool TimeEntryExistsForDay(DateTime ATheDate);
         [OperationContract]
-        List<TimeEntryDataContract> GetEntries();
+        List<TimeEntryDataContract> GetEntries(DateTime AFromDate, DateTime AToDate);
     }    
     
     // Use a data contract as illustrated in the sample below to add composite types to service operations.
@@ -26,11 +26,13 @@ namespace SaisieHorairesService
     [DataContract]
     public class TimeEntryDataContract
     {
-        [DataMember]
+        [DataMember(Order=1)]
         public DateTime TheDate { get;set;}
-        [DataMember]
+        [DataMember(Order=2)]
         public decimal StartTime{ get;set;}
-        [DataMember]
+        [DataMember(Order=3)]
         public decimal EndTime{ get;set;}
+        [DataMember(Order = 4)]
+        public decimal SumTime { get; set; }
     }
 }

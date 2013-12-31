@@ -5,4 +5,4 @@ Nom du serveur : kxz0roa257
 
 chaine de connexion :
 
-Server=tcp:kxz0roa257.database.windows.net,1433;Database=SaisieHoraires;User ID=@kxz0roa257;Password={votre_mot_de_passe_ici};Trusted_Connection=False;Encrypt=True;Connection Timeout=30;
+Server=tcp:kxz0roa257.database.windows.net,1433;Database=SaisieHoraires;User ID=tom5025@kxz0roa257;Password={votre_mot_de_passe_ici};Trusted_Connection=False;Encrypt=True;Connection Timeout=30;

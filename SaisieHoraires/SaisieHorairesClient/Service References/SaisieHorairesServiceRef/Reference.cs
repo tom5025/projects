@@ -23,13 +23,16 @@ namespace SaisieHorairesClient.SaisieHorairesServiceRef {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal EndTimeField;
+        private System.DateTime TheDateField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private decimal StartTimeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime TheDateField;
+        private decimal EndTimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal SumTimeField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -42,19 +45,19 @@ namespace SaisieHorairesClient.SaisieHorairesServiceRef {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal EndTime {
+        public System.DateTime TheDate {
             get {
-                return this.EndTimeField;
+                return this.TheDateField;
             }
             set {
-                if ((this.EndTimeField.Equals(value) != true)) {
-                    this.EndTimeField = value;
-                    this.RaisePropertyChanged("EndTime");
+                if ((this.TheDateField.Equals(value) != true)) {
+                    this.TheDateField = value;
+                    this.RaisePropertyChanged("TheDate");
                 }
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
+        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
         public decimal StartTime {
             get {
                 return this.StartTimeField;
@@ -67,15 +70,28 @@ namespace SaisieHorairesClient.SaisieHorairesServiceRef {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime TheDate {
+        [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
+        public decimal EndTime {
             get {
-                return this.TheDateField;
+                return this.EndTimeField;
             }
             set {
-                if ((this.TheDateField.Equals(value) != true)) {
-                    this.TheDateField = value;
-                    this.RaisePropertyChanged("TheDate");
+                if ((this.EndTimeField.Equals(value) != true)) {
+                    this.EndTimeField = value;
+                    this.RaisePropertyChanged("EndTime");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
+        public decimal SumTime {
+            get {
+                return this.SumTimeField;
+            }
+            set {
+                if ((this.SumTimeField.Equals(value) != true)) {
+                    this.SumTimeField = value;
+                    this.RaisePropertyChanged("SumTime");
                 }
             }
         }
@@ -113,10 +129,10 @@ namespace SaisieHorairesClient.SaisieHorairesServiceRef {
         System.Threading.Tasks.Task<bool> TimeEntryExistsForDayAsync(System.DateTime ATheDate);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISaisieHorairesService/GetEntries", ReplyAction="http://tempuri.org/ISaisieHorairesService/GetEntriesResponse")]
-        SaisieHorairesClient.SaisieHorairesServiceRef.TimeEntryDataContract[] GetEntries();
+        SaisieHorairesClient.SaisieHorairesServiceRef.TimeEntryDataContract[] GetEntries(System.DateTime AFromDate, System.DateTime AToDate);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISaisieHorairesService/GetEntries", ReplyAction="http://tempuri.org/ISaisieHorairesService/GetEntriesResponse")]
-        System.Threading.Tasks.Task<SaisieHorairesClient.SaisieHorairesServiceRef.TimeEntryDataContract[]> GetEntriesAsync();
+        System.Threading.Tasks.Task<SaisieHorairesClient.SaisieHorairesServiceRef.TimeEntryDataContract[]> GetEntriesAsync(System.DateTime AFromDate, System.DateTime AToDate);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -170,12 +186,12 @@ namespace SaisieHorairesClient.SaisieHorairesServiceRef {
             return base.Channel.TimeEntryExistsForDayAsync(ATheDate);
         }
         
-        public SaisieHorairesClient.SaisieHorairesServiceRef.TimeEntryDataContract[] GetEntries() {
-            return base.Channel.GetEntries();
+        public SaisieHorairesClient.SaisieHorairesServiceRef.TimeEntryDataContract[] GetEntries(System.DateTime AFromDate, System.DateTime AToDate) {
+            return base.Channel.GetEntries(AFromDate, AToDate);
         }
         
-        public System.Threading.Tasks.Task<SaisieHorairesClient.SaisieHorairesServiceRef.TimeEntryDataContract[]> GetEntriesAsync() {
-            return base.Channel.GetEntriesAsync();
+        public System.Threading.Tasks.Task<SaisieHorairesClient.SaisieHorairesServiceRef.TimeEntryDataContract[]> GetEntriesAsync(System.DateTime AFromDate, System.DateTime AToDate) {
+            return base.Channel.GetEntriesAsync(AFromDate, AToDate);
         }
     }
 }

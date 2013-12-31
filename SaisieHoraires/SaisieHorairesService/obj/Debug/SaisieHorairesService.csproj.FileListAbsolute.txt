@@ -10,3 +10,5 @@ C:\Users\thomas\documents\visual studio 2013\Projects\SaisieHoraires\SaisieHorai
 C:\Users\thomas\documents\visual studio 2013\Projects\SaisieHoraires\SaisieHorairesService\obj\Debug\SaisieHorairesService.pdb
 C:\Users\thomas\Documents\Visual Studio 2013\Projects\SaisieHoraires\SaisieHorairesService\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\thomas\Documents\Visual Studio 2013\Projects\SaisieHoraires\SaisieHorairesService\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\thomas\documents\visual studio 2013\Projects\SaisieHoraires\SaisieHorairesService\bin\Debug\CommonSaisieHoraires.dll
+C:\Users\thomas\documents\visual studio 2013\Projects\SaisieHoraires\SaisieHorairesService\bin\Debug\CommonSaisieHoraires.pdb
