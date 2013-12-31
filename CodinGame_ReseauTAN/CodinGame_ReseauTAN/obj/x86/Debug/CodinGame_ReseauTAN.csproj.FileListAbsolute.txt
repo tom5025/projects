@@ -1,0 +1,5 @@
+C:\Users\thomas\Documents\Visual Studio 2010\Projects\CodinGame_ReseauTAN\CodinGame_ReseauTAN\obj\x86\Debug\CodinGame_ReseauTAN.csprojResolveAssemblyReference.cache
+C:\Users\thomas\Documents\Visual Studio 2010\Projects\CodinGame_ReseauTAN\CodinGame_ReseauTAN\bin\Debug\CodinGame_ReseauTAN.exe
+C:\Users\thomas\Documents\Visual Studio 2010\Projects\CodinGame_ReseauTAN\CodinGame_ReseauTAN\bin\Debug\CodinGame_ReseauTAN.pdb
+C:\Users\thomas\Documents\Visual Studio 2010\Projects\CodinGame_ReseauTAN\CodinGame_ReseauTAN\obj\x86\Debug\CodinGame_ReseauTAN.exe
+C:\Users\thomas\Documents\Visual Studio 2010\Projects\CodinGame_ReseauTAN\CodinGame_ReseauTAN\obj\x86\Debug\CodinGame_ReseauTAN.pdb
