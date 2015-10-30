@@ -12,3 +12,6 @@ C:\Users\thomas\documents\visual studio 2013\Projects\SaisieHoraires\SaisieHorai
 C:\Users\thomas\documents\visual studio 2013\Projects\SaisieHoraires\SaisieHorairesClient\obj\Debug\SaisieHorairesClient.csprojResolveAssemblyReference.cache
 C:\Users\thomas\documents\visual studio 2013\Projects\SaisieHoraires\SaisieHorairesClient\obj\Debug\RdlCompile.cache
 C:\Users\thomas\documents\visual studio 2013\Projects\SaisieHoraires\SaisieHorairesClient\obj\Debug\RdlCompile.compiled
+C:\Users\thomas\Documents\projects\SaisieHoraires\SaisieHorairesClient\bin\Debug\SaisieHorairesClient.exe.config
+C:\Users\thomas\Documents\projects\SaisieHoraires\SaisieHorairesClient\obj\Debug\SaisieHorairesClient.exe
+C:\Users\thomas\Documents\projects\SaisieHoraires\SaisieHorairesClient\obj\Debug\SaisieHorairesClient.pdb

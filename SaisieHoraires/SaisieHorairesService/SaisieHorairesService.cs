@@ -22,7 +22,7 @@ namespace SaisieHorairesService
                                 in context.UsersSet
                                 where (t.Username == userName) &&
                                       (t.Password == password)
-                                select t).First();
+                                select t).FirstOrDefault();
             }
             catch (Exception)
             {
@@ -112,8 +112,8 @@ namespace SaisieHorairesService
             List<TimeEntry> efList = new List<TimeEntry>(from t in context.TimeEntrySet 
                                                          where DbFunctions.TruncateTime(t.TheDate) >= DbFunctions.TruncateTime(AFromDate) &&
                                                                DbFunctions.TruncateTime(t.TheDate) <= DbFunctions.TruncateTime(AToDate)
+                                                         orderby t.TheDate
                                                          select t);
-            efList.Sort((entry1, entry2) => entry1.TheDate.CompareTo(entry2.TheDate));
 
             foreach (TimeEntry cur in efList)
             {
