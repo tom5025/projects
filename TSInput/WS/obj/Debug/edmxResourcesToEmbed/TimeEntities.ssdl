@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TimeEntities.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="TimeEntitiesStoreContainer">
+    <EntitySet Name="TimeEntrySet" EntityType="TimeEntities.Store.TimeEntrySet" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="TimeEntrySet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="project" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="prestation" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="desc" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+</Schema>

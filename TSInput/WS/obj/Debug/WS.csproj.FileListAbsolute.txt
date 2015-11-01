@@ -1,0 +1,10 @@
+C:\Users\thomas\Documents\projects\TSInput\WS\bin\WS.dll.config
+C:\Users\thomas\Documents\projects\TSInput\WS\bin\WS.dll
+C:\Users\thomas\Documents\projects\TSInput\WS\bin\WS.pdb
+C:\Users\thomas\Documents\projects\TSInput\WS\bin\EntityFramework.dll
+C:\Users\thomas\Documents\projects\TSInput\WS\bin\EntityFramework.SqlServer.dll
+C:\Users\thomas\Documents\projects\TSInput\WS\bin\EntityFramework.xml
+C:\Users\thomas\Documents\projects\TSInput\WS\bin\EntityFramework.SqlServer.xml
+C:\Users\thomas\Documents\projects\TSInput\WS\obj\Debug\WS.dll
+C:\Users\thomas\Documents\projects\TSInput\WS\obj\Debug\WS.pdb
+C:\Users\thomas\Documents\projects\TSInput\WS\obj\Debug\WS.csprojResolveAssemblyReference.cache

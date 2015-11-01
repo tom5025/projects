@@ -1,0 +1,13 @@
+C:\Users\thomas\Documents\projects\TSInput\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\thomas\Documents\projects\TSInput\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\thomas\Documents\projects\TSInput\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\thomas\Documents\projects\TSInput\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\thomas\Documents\projects\TSInput\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\thomas\Documents\projects\TSInput\WindowsFormsApplication1\obj\Debug\TestClient.csproj.GenerateResource.Cache
+C:\Users\thomas\Documents\projects\TSInput\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\thomas\Documents\projects\TSInput\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\thomas\Documents\projects\TSInput\WindowsFormsApplication1\obj\Debug\TestClient.csprojResolveAssemblyReference.cache
+C:\Users\thomas\Documents\projects\TSInput\WindowsFormsApplication1\bin\Debug\WS.dll
+C:\Users\thomas\Documents\projects\TSInput\WindowsFormsApplication1\bin\Debug\EntityFramework.dll
+C:\Users\thomas\Documents\projects\TSInput\WindowsFormsApplication1\bin\Debug\WS.pdb
+C:\Users\thomas\Documents\projects\TSInput\WindowsFormsApplication1\bin\Debug\EntityFramework.xml
