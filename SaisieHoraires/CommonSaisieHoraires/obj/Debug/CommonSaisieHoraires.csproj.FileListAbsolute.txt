@@ -2,3 +2,7 @@ C:\Users\thomas\documents\visual studio 2013\Projects\SaisieHoraires\CommonSaisi
 C:\Users\thomas\documents\visual studio 2013\Projects\SaisieHoraires\CommonSaisieHoraires\bin\Debug\CommonSaisieHoraires.pdb
 C:\Users\thomas\documents\visual studio 2013\Projects\SaisieHoraires\CommonSaisieHoraires\obj\Debug\CommonSaisieHoraires.dll
 C:\Users\thomas\documents\visual studio 2013\Projects\SaisieHoraires\CommonSaisieHoraires\obj\Debug\CommonSaisieHoraires.pdb
+C:\Users\thomas\Documents\projects\SaisieHoraires\CommonSaisieHoraires\bin\Debug\CommonSaisieHoraires.dll
+C:\Users\thomas\Documents\projects\SaisieHoraires\CommonSaisieHoraires\bin\Debug\CommonSaisieHoraires.pdb
+C:\Users\thomas\Documents\projects\SaisieHoraires\CommonSaisieHoraires\obj\Debug\CommonSaisieHoraires.dll
+C:\Users\thomas\Documents\projects\SaisieHoraires\CommonSaisieHoraires\obj\Debug\CommonSaisieHoraires.pdb

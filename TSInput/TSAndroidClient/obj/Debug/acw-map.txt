@@ -1,0 +1,4 @@
+TSAndroidClient.MainActivity, TSAndroidClient;md51f41b3ddf6815e9d82cd4dbb6e50dc86.MainActivity
+TSAndroidClient.MainActivity, TSAndroidClient, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md51f41b3ddf6815e9d82cd4dbb6e50dc86.MainActivity
+TSAndroidClient.MainActivity;md51f41b3ddf6815e9d82cd4dbb6e50dc86.MainActivity
+tsandroidclient.MainActivity;md51f41b3ddf6815e9d82cd4dbb6e50dc86.MainActivity

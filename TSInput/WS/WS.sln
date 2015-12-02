@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WS", "WS.csproj", "{E6BEA86
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestClient", "..\WindowsFormsApplication1\TestClient.csproj", "{084A23D3-8EDA-4104-BAC3-DFCD2B201598}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSAndroidClient", "..\TSAndroidClient\TSAndroidClient.csproj", "{4C93CBFA-89D3-4835-941E-2896412918C7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,12 @@ Global
 		{084A23D3-8EDA-4104-BAC3-DFCD2B201598}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{084A23D3-8EDA-4104-BAC3-DFCD2B201598}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{084A23D3-8EDA-4104-BAC3-DFCD2B201598}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C93CBFA-89D3-4835-941E-2896412918C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C93CBFA-89D3-4835-941E-2896412918C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C93CBFA-89D3-4835-941E-2896412918C7}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4C93CBFA-89D3-4835-941E-2896412918C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C93CBFA-89D3-4835-941E-2896412918C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C93CBFA-89D3-4835-941E-2896412918C7}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SaisieHorairesService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/SaisieHorairesService" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISaisieHorairesService_GetTimeEntry_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTimeEntry" />
+  </wsdl:message>
+  <wsdl:message name="ISaisieHorairesService_GetTimeEntry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTimeEntryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaisieHorairesService_AddNewTimeEntry_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewTimeEntry" />
+  </wsdl:message>
+  <wsdl:message name="ISaisieHorairesService_AddNewTimeEntry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewTimeEntryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaisieHorairesService_TimeEntryExistsForDay_InputMessage">
+    <wsdl:part name="parameters" element="tns:TimeEntryExistsForDay" />
+  </wsdl:message>
+  <wsdl:message name="ISaisieHorairesService_TimeEntryExistsForDay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TimeEntryExistsForDayResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaisieHorairesService_GetEntries_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntries" />
+  </wsdl:message>
+  <wsdl:message name="ISaisieHorairesService_GetEntries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntriesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISaisieHorairesService">
+    <wsdl:operation name="GetTimeEntry">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaisieHorairesService/GetTimeEntry" message="tns:ISaisieHorairesService_GetTimeEntry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaisieHorairesService/GetTimeEntryResponse" message="tns:ISaisieHorairesService_GetTimeEntry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewTimeEntry">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaisieHorairesService/AddNewTimeEntry" message="tns:ISaisieHorairesService_AddNewTimeEntry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaisieHorairesService/AddNewTimeEntryResponse" message="tns:ISaisieHorairesService_AddNewTimeEntry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TimeEntryExistsForDay">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaisieHorairesService/TimeEntryExistsForDay" message="tns:ISaisieHorairesService_TimeEntryExistsForDay_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaisieHorairesService/TimeEntryExistsForDayResponse" message="tns:ISaisieHorairesService_TimeEntryExistsForDay_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntries">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaisieHorairesService/GetEntries" message="tns:ISaisieHorairesService_GetEntries_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaisieHorairesService/GetEntriesResponse" message="tns:ISaisieHorairesService_GetEntries_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISaisieHorairesService" type="tns:ISaisieHorairesService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetTimeEntry">
+      <soap:operation soapAction="http://tempuri.org/ISaisieHorairesService/GetTimeEntry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewTimeEntry">
+      <soap:operation soapAction="http://tempuri.org/ISaisieHorairesService/AddNewTimeEntry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TimeEntryExistsForDay">
+      <soap:operation soapAction="http://tempuri.org/ISaisieHorairesService/TimeEntryExistsForDay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntries">
+      <soap:operation soapAction="http://tempuri.org/ISaisieHorairesService/GetEntries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SaisieHorairesService">
+    <wsdl:port name="BasicHttpBinding_ISaisieHorairesService" binding="tns:BasicHttpBinding_ISaisieHorairesService">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/SaisieHorairesService/Service1/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

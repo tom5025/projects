@@ -10,3 +10,15 @@ C:\Users\thomas\documents\visual studio 2013\Projects\SaisieHoraires\DataModel\o
 C:\Users\thomas\documents\visual studio 2013\Projects\SaisieHoraires\DataModel\bin\Debug\CommonSaisieHoraires.dll
 C:\Users\thomas\documents\visual studio 2013\Projects\SaisieHoraires\DataModel\bin\Debug\CommonSaisieHoraires.pdb
 C:\Users\thomas\documents\visual studio 2013\Projects\SaisieHoraires\DataModel\obj\Debug\DataModel.csprojResolveAssemblyReference.cache
+C:\Users\thomas\Documents\projects\SaisieHoraires\DataModel\bin\Debug\DataModel.dll.config
+C:\Users\thomas\Documents\projects\SaisieHoraires\DataModel\bin\Debug\DataModel.dll
+C:\Users\thomas\Documents\projects\SaisieHoraires\DataModel\bin\Debug\DataModel.pdb
+C:\Users\thomas\Documents\projects\SaisieHoraires\DataModel\bin\Debug\CommonSaisieHoraires.dll
+C:\Users\thomas\Documents\projects\SaisieHoraires\DataModel\bin\Debug\EntityFramework.dll
+C:\Users\thomas\Documents\projects\SaisieHoraires\DataModel\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\thomas\Documents\projects\SaisieHoraires\DataModel\bin\Debug\CommonSaisieHoraires.pdb
+C:\Users\thomas\Documents\projects\SaisieHoraires\DataModel\bin\Debug\EntityFramework.xml
+C:\Users\thomas\Documents\projects\SaisieHoraires\DataModel\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\thomas\Documents\projects\SaisieHoraires\DataModel\obj\Debug\DataModel.csprojResolveAssemblyReference.cache
+C:\Users\thomas\Documents\projects\SaisieHoraires\DataModel\obj\Debug\DataModel.dll
+C:\Users\thomas\Documents\projects\SaisieHoraires\DataModel\obj\Debug\DataModel.pdb

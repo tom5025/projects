@@ -54,5 +54,11 @@ namespace SaisieHorairesClient
 
             DisplayTotalHours();            
         }
+
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var fm = new fmHoursReport();
+            fm.Show(this);
+        }
     }
 }

@@ -53,7 +53,7 @@ namespace SaisieHorairesService
                 ret.TheDate = entity.TheDate;
                 ret.StartTime = entity.StartTime;
                 ret.EndTime = entity.EndTime;
-                ret.SumTime = entity.SumTime;
+                ret.SumTime = 0; //entity.SumTime;
                 return ret;
             }                
             else
@@ -121,7 +121,7 @@ namespace SaisieHorairesService
                 newItem.TheDate = cur.TheDate;
                 newItem.StartTime = cur.StartTime;
                 newItem.EndTime = cur.EndTime;
-                newItem.SumTime = cur.SumTime;
+                newItem.SumTime = 0;//cur.SumTime;
                 resList.Add(newItem);
             }
 

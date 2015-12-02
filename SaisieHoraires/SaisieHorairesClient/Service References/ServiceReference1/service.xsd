@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/SaisieHorairesService" />
+  <xs:element name="GetTimeEntry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTimeEntryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/SaisieHorairesService" minOccurs="0" name="GetTimeEntryResult" nillable="true" type="q1:TimeEntryDataContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddNewTimeEntry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ATheDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="AStartTime" type="xs:decimal" />
+        <xs:element minOccurs="0" name="AEndTime" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddNewTimeEntryResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TimeEntryExistsForDay">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ATheDate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TimeEntryExistsForDayResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TimeEntryExistsForDayResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntries">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AFromDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="AToDate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/SaisieHorairesService" minOccurs="0" name="GetEntriesResult" nillable="true" type="q2:ArrayOfTimeEntryDataContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

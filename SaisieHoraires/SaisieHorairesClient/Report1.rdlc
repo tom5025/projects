@@ -488,7 +488,6 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DataSet1</DataSetName>
         <Height>1.8cm</Height>
         <Width>10cm</Width>
         <Style>
@@ -519,7 +518,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>70945633-7281-4aea-8a83-0586f21646da</rd:DataSourceID>
+      <rd:DataSourceID>fa5749ae-2fba-4db3-b76b-59b145ec5ac0</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
