@@ -16,8 +16,16 @@ export class HomeComponent {
 
   ngOnInit() {
     this.personForm = this.fb.group({
-      name: ['']
+      name: ['', Validators.required]
     });
+  }
+
+  updateName() {
+    this.personForm.controls['name'].setValue('Nancy');
+  }
+
+  onSubmit() {
+    console.warn(this.personForm.value);
   }
   //name = new FormControl('');
 }

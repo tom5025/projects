@@ -66,9 +66,16 @@
     </div>
   </div>
 </form>-->
-  <form [formGroup]="personForm">
+  <form [formGroup]="personForm" (ngSubmit)="onSubmit()">
     <label>
       Name:
-      <input type="text" formControlName="name">
+      <input type="text" formControlName="name" required>
     </label>
+    <p>
+      <button (click)="updateName()">Update Name</button>
+    </p>
+    <button type="submit" [disabled]="!personForm.valid">Submit</button>
   </form>
+  <p>
+    Form Status: {{ personForm.status }}
+  </p>
