@@ -1,0 +1,8 @@
+C:\Users\thomas\source\repos\CarTutorialAPI\CarTutorialAPI.ViewMoels\bin\Debug\netcoreapp2.1\CarTutorialAPI.ViewModels.deps.json
+C:\Users\thomas\source\repos\CarTutorialAPI\CarTutorialAPI.ViewMoels\bin\Debug\netcoreapp2.1\CarTutorialAPI.ViewModels.dll
+C:\Users\thomas\source\repos\CarTutorialAPI\CarTutorialAPI.ViewMoels\bin\Debug\netcoreapp2.1\CarTutorialAPI.ViewModels.pdb
+C:\Users\thomas\source\repos\CarTutorialAPI\CarTutorialAPI.ViewMoels\obj\Debug\netcoreapp2.1\CarTutorialAPI.ViewModels.csproj.CoreCompileInputs.cache
+C:\Users\thomas\source\repos\CarTutorialAPI\CarTutorialAPI.ViewMoels\obj\Debug\netcoreapp2.1\CarTutorialAPI.ViewModels.AssemblyInfoInputs.cache
+C:\Users\thomas\source\repos\CarTutorialAPI\CarTutorialAPI.ViewMoels\obj\Debug\netcoreapp2.1\CarTutorialAPI.ViewModels.AssemblyInfo.cs
+C:\Users\thomas\source\repos\CarTutorialAPI\CarTutorialAPI.ViewMoels\obj\Debug\netcoreapp2.1\CarTutorialAPI.ViewModels.dll
+C:\Users\thomas\source\repos\CarTutorialAPI\CarTutorialAPI.ViewMoels\obj\Debug\netcoreapp2.1\CarTutorialAPI.ViewModels.pdb

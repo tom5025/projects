@@ -20,8 +20,13 @@ export class HomeComponent {
     });
   }
 
+  trstMeth(param: string | number)
+  {
+
+  }
   updateName() {
     this.personForm.controls['name'].setValue('Nancy');
+    
   }
 
   onSubmit() {
