@@ -20,8 +20,8 @@ import 'hammerjs';
 import { AuthGuard } from './helpers/canActivateAuthGuard';
 import { HeadComponent } from './layout/head.component';
 import { LeftPanelComponent } from './layout/left-panel.component';
-import { BrandListComponent } from './brand-list/brand-list.component';
-import { NewArticleComponent } from './new-article/new-article.component';
+import { BrandListComponent } from './components/brand-list/brand-list.component';
+import { NewArticleComponent } from './components/new-article/new-article.component';
 
 @NgModule({
   declarations: [

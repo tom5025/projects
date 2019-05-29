@@ -10,6 +10,7 @@ export class BrandListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log("salut");
   }
 
 }

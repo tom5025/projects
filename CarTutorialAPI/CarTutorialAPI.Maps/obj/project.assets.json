@@ -4605,11 +4605,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\thomas\\source\\repos\\CarTutorialAPI\\CarTutorialAPI.Maps\\CarTutorialAPI.Maps.csproj",
+      "projectUniqueName": "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.Maps\\CarTutorialAPI.Maps.csproj",
       "projectName": "CarTutorialAPI.Maps",
-      "projectPath": "C:\\Users\\thomas\\source\\repos\\CarTutorialAPI\\CarTutorialAPI.Maps\\CarTutorialAPI.Maps.csproj",
+      "projectPath": "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.Maps\\CarTutorialAPI.Maps.csproj",
       "packagesPath": "C:\\Users\\thomas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\thomas\\source\\repos\\CarTutorialAPI\\CarTutorialAPI.Maps\\obj\\",
+      "outputPath": "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.Maps\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -4628,11 +4628,11 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\thomas\\source\\repos\\CarTutorialAPI\\CarTutorialAPI.Services\\CarTutorialAPI.Services.csproj": {
-              "projectPath": "C:\\Users\\thomas\\source\\repos\\CarTutorialAPI\\CarTutorialAPI.Services\\CarTutorialAPI.Services.csproj"
+            "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.Services\\CarTutorialAPI.Services.csproj": {
+              "projectPath": "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.Services\\CarTutorialAPI.Services.csproj"
             },
-            "C:\\Users\\thomas\\source\\repos\\CarTutorialAPI\\CarTutorialAPI.ViewMoels\\CarTutorialAPI.ViewModels.csproj": {
-              "projectPath": "C:\\Users\\thomas\\source\\repos\\CarTutorialAPI\\CarTutorialAPI.ViewMoels\\CarTutorialAPI.ViewModels.csproj"
+            "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.ViewMoels\\CarTutorialAPI.ViewModels.csproj": {
+              "projectPath": "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.ViewMoels\\CarTutorialAPI.ViewModels.csproj"
             }
           }
         }

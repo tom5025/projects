@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\thomas\\source\\repos\\CarTutorialAPI\\CarTutorialAPI.Models\\CarTutorialAPI.Models.csproj": {}
+    "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.Models\\CarTutorialAPI.Models.csproj": {}
   },
   "projects": {
-    "C:\\Users\\thomas\\source\\repos\\CarTutorialAPI\\CarTutorialAPI.Models\\CarTutorialAPI.Models.csproj": {
+    "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.Models\\CarTutorialAPI.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\thomas\\source\\repos\\CarTutorialAPI\\CarTutorialAPI.Models\\CarTutorialAPI.Models.csproj",
+        "projectUniqueName": "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.Models\\CarTutorialAPI.Models.csproj",
         "projectName": "CarTutorialAPI.Models",
-        "projectPath": "C:\\Users\\thomas\\source\\repos\\CarTutorialAPI\\CarTutorialAPI.Models\\CarTutorialAPI.Models.csproj",
+        "projectPath": "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.Models\\CarTutorialAPI.Models.csproj",
         "packagesPath": "C:\\Users\\thomas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\thomas\\source\\repos\\CarTutorialAPI\\CarTutorialAPI.Models\\obj\\",
+        "outputPath": "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
