@@ -12,15 +12,21 @@ import { Helpers } from '../helpers/helpers';
 
 import {BaseService} from './base.service';
 import { AppConfig } from '../config/config';
+import { Article } from '../models/Article';
 
 @Injectable()
 
 export class ArticleService extends BaseService {
 
-    constructor(private http: HttpClient, private config: AppConfig, helper: Helpers) { super(helper); }
     
-    public AddArticle() {
+    public AddArticle(art:Article) {
+        this.http.post(this.pathAPI + 'article', art);
         //this.http.post
+    }
+
+    public ModArticle(art : Article)
+    {
+        this.http.put(this.pathAPI + 'article', art);
     }
 
 }

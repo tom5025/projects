@@ -18,9 +18,6 @@ import { Helpers } from '../helpers/helpers';
 
 export class UserService extends BaseService {
 
-  private pathAPI = this.config.setting['PathAPI'];
-
-  constructor(private http: HttpClient, private config: AppConfig, helper: Helpers) { super(helper); }
 
   /** GET heroes from the server */
 

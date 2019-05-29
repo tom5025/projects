@@ -9,12 +9,15 @@ import { Observable } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 
 import { Helpers } from '../helpers/helpers';
+import { AppConfig } from '../config/config';
 
 @Injectable()
 
 export class BaseService {
 
-    constructor(private helper: Helpers) { }
+    protected pathAPI = this.config.setting['PathAPI'];
+
+    constructor(protected http:HttpClient, protected helper: Helpers, protected config : AppConfig) { }
 
     public extractData(res: Response) {
 
