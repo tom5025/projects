@@ -18,11 +18,7 @@ import { Helpers } from '../helpers/helpers';
 
 export class TokenService extends BaseService {
 
-  private pathAPI = this.config.setting['PathAPI'];
-
   public errorMessage: string;
-
-  constructor(private http: HttpClient, private config: AppConfig, helper: Helpers) { super(helper); }
 
   auth(data: any): any {
 

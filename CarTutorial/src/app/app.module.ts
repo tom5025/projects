@@ -19,7 +19,6 @@ import { TokenService } from './services/token.service';
 import 'hammerjs';
 import { AuthGuard } from './helpers/canActivateAuthGuard';
 import { HeadComponent } from './layout/head.component';
-import { LeftPanelComponent } from './layout/left-panel.component';
 import { BrandListComponent } from './components/brand-list/brand-list.component';
 import { NewArticleComponent } from './components/new-article/new-article.component';
 
@@ -27,7 +26,6 @@ import { NewArticleComponent } from './components/new-article/new-article.compon
   declarations: [
     AppComponent,
     HeadComponent,
-    LeftPanelComponent,
     DashboardComponent,
     UsersComponent,
     BrandListComponent,
