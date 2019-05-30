@@ -2,4 +2,8 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/testFormsNg/.vs/testFormsNg
+.vs/
+.env
+.next/
+node_modules/
+.vs/
