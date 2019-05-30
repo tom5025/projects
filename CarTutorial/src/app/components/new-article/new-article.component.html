@@ -1,25 +1,29 @@
 <p>
-  new-article
+  New Tutorial
 </p>
 
 <form>
-  <mat-form-field>
-    <mat-label>
-      Marque
-    </mat-label>
-    <mat-select required>
-      <mat-option *ngFor="let brand of BrandList" [value]="brand.name">{{brand.name}}</mat-option>      
-    </mat-select>
-  </mat-form-field>
-  <mat-form-field>
-    <mat-label>
-      Catégorie
-    </mat-label>
-    <mat-select required>
-      <mat-option *ngFor="let cat of CatList" [value]="cat.name">{{cat.name}}</mat-option>      
-    </mat-select>
-  </mat-form-field>
+  <div>
+    <mat-form-field>
+      <mat-label>
+        Brand
+      </mat-label>
+      <mat-select required>
+        <mat-option *ngFor="let brand of BrandList" [value]="brand.name">{{brand.name}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <mat-label>
+        Category
+      </mat-label>
+      <mat-select required>
+        <mat-option *ngFor="let cat of CatList" [value]="cat.name">{{cat.name}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
 </form>
-  <!-- <div class="request-list" *ngFor="let brand of BrandList">
+<!-- <div class="request-list" *ngFor="let brand of BrandList">
     <span>{{ brand.name }}</span>
   </div> -->
