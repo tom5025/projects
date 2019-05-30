@@ -4,10 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './layout/app.component';
 
-import { MatButtonModule, MatCheckboxModule, MatTabsModule, MatToolbarModule, MatIconModule } from '@angular/material';
-import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatSidenavModule } from '@angular/material/sidenav';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -21,6 +17,8 @@ import { AuthGuard } from './helpers/canActivateAuthGuard';
 import { HeadComponent } from './layout/head.component';
 import { BrandListComponent } from './components/brand-list/brand-list.component';
 import { NewArticleComponent } from './components/new-article/new-article.component';
+import { LeftPanelComponent } from './layout/left-panel.component';
+import { MaterialModule } from './material';
 
 @NgModule({
   declarations: [
@@ -29,20 +27,13 @@ import { NewArticleComponent } from './components/new-article/new-article.compon
     DashboardComponent,
     UsersComponent,
     BrandListComponent,
-    NewArticleComponent
+    NewArticleComponent,
+    LeftPanelComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatButtonModule,
-    MatCheckboxModule,
-    MatInputModule,
-    MatFormFieldModule,
-    MatIconModule,
-
-    MatSidenavModule,
-    MatTabsModule,
-    MatToolbarModule,
+    MaterialModule,
 
     AppRoutingModule,
 
