@@ -1,11 +1,19 @@
 <app-head></app-head>
 <mat-sidenav-container>
-  <app-left-panel>
-
-  </app-left-panel>
+    
+    <mat-sidenav #sidenav mode="side" opened>
+     side nav content
+     <!-- <p></p> -->
+    </mat-sidenav>
+    
+    <section>
+      test
+    </section>
+    
   <mat-sidenav-content>
     <main>
+        <p><button mat-button (click)="sidenav.toggle()">Toggle</button></p>
       <router-outlet></router-outlet>
     </main>
   </mat-sidenav-content>
-</mat-sidenav-container>
+</mat-sidenav-container> 
