@@ -13,13 +13,9 @@ namespace CarTutorialAPI.Web.API.Controllers
     public class BrandsController : ControllerBase
     {
         [HttpGet]
-
-        public IEnumerable<BrandViewModel> Get()
-
+        public ActionResult<IEnumerable<BrandViewModel>> Get()
         {
-
             return new List<BrandViewModel>() { new BrandViewModel { Name = "test" } };
-
         }
     }
 }

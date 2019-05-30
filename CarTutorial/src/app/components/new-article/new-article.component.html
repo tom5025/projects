@@ -8,7 +8,7 @@
       Marque
     </mat-label>
     <mat-select required>
-      <option *ngFor="let brand of brandList" [value]="brand.name">{{brand.name}}</option>      
+      <mat-option *ngFor="let brand of BrandList" [value]="brand.name">{{brand.name}}</mat-option>      
     </mat-select>
   </mat-form-field>
 </form>

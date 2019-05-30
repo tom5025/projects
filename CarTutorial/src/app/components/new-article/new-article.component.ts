@@ -8,13 +8,18 @@ import { BrandsService } from 'src/app/services/brands.service';
 })
 export class NewArticleComponent implements OnInit {
 
-  public brandList
+  public BrandList : any = [];
 
   constructor(private brandsvc : BrandsService) { 
-    this.brandList = this.brandsvc.GetBrands();    
+    
   }
 
   ngOnInit() {
+    this.BrandList = this.brandsvc.GetBrands().subscribe({
+      next: (data : {}) => { 
+        this.BrandList = data;
+        console.log(data); }
+    })
   }
 
 }

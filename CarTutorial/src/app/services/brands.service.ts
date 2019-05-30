@@ -2,34 +2,32 @@ import { Injectable } from '@angular/core';
 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { Observable } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 
 // import { of } from 'rxjs/observable/of';
 
-import { catchError, map, tap } from 'rxjs/operators';
+import { catchError, map, tap, retry } from 'rxjs/operators';
 
 import { Helpers } from '../helpers/helpers';
 
 import {BaseService} from './base.service';
 import { AppConfig } from '../config/config';
 import { Article } from '../models/Article';
+import { Brand } from '../models/Brand';
 
 @Injectable()
 
 export class BrandsService extends BaseService {
 
-    public GetBrands ()
-    {
-        return this.http.get(this.pathAPI + 'brands');
+    httpOptions = { 
+        headers: new HttpHeaders({
+            'Content-Type':'application/json'
+        })
     }
-    // public AddArticle(art:Article) {
-    //     this.http.post(this.pathAPI + 'article', art);
-    //     //this.http.post
-    // }
 
-    // public ModArticle(art : Article)
-    // {
-    //     this.http.put(this.pathAPI + 'article', art);
-    // }
-
+    public GetBrands() : Observable<Brand>
+    {
+        return this.http.get<Brand>(this.pathAPI + 'brands')
+            .pipe(retry(1),catchError(this.handleError));        
+    }
 }

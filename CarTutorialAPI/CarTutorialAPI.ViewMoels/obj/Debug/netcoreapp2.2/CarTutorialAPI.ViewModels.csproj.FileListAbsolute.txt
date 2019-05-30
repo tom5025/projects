@@ -14,3 +14,4 @@ C:\Users\thomas\Source\Repos\projects\CarTutorialAPI\CarTutorialAPI.ViewMoels\ob
 C:\Users\thomas\Source\Repos\projects\CarTutorialAPI\CarTutorialAPI.ViewMoels\obj\Debug\netcoreapp2.2\CarTutorialAPI.ViewModels.AssemblyInfo.cs
 C:\Users\thomas\Source\Repos\projects\CarTutorialAPI\CarTutorialAPI.ViewMoels\obj\Debug\netcoreapp2.2\CarTutorialAPI.ViewModels.dll
 C:\Users\thomas\Source\Repos\projects\CarTutorialAPI\CarTutorialAPI.ViewMoels\obj\Debug\netcoreapp2.2\CarTutorialAPI.ViewModels.pdb
+C:\Users\thomas\Source\Repos\projects\CarTutorialAPI\CarTutorialAPI.ViewMoels\obj\Debug\netcoreapp2.2\CarTutorialAPI.ViewModels.csprojAssemblyReference.cache

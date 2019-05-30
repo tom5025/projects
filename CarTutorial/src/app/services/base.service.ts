@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { Observable } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 
 // import { of } from 'rxjs/observable/of';
 
@@ -15,88 +15,99 @@ import { AppConfig } from '../config/config';
 
 export class BaseService {
 
-    protected pathAPI = this.config.setting['PathAPI'];
+  protected pathAPI = this.config.setting['PathAPI'];
 
-    constructor(protected http:HttpClient, protected helper: Helpers, protected config : AppConfig) { }
+  constructor(protected http: HttpClient, protected helper: Helpers, protected config: AppConfig) { }
 
-    public extractData(res: Response) {
+  public extractData(res: Response) {
 
-        let body = res.json();
+    let body = res.json();
 
-        return body || {};
+    return body || {};
 
-      }
+  }
 
-    
+  handleError(error) {
+    let errorMessage = '';
+    if (error.error instanceof ErrorEvent) {
+      // Get client-side error
+      errorMessage = error.error.message;
+    } else {
+      // Get server-side error
+      errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
+    }
+    window.alert(errorMessage);
+    return throwError(errorMessage);
+  }
 
-      public handleError(error: Response | any) {
+    //   public handleError(error: Response | any) {
 
-        // In a real-world app, we might use a remote logging infrastructure
+    //     // In a real-world app, we might use a remote logging infrastructure
 
-        let errMsg: string;
+    //     let errMsg: string;
 
-        if (error instanceof Response) {
+    //     if (error instanceof Response) {
 
-          const body = error.json() || '';
+    //       const body = error.json() || '';
 
-          const err = body || JSON.stringify(body);
+    //       const err = body || JSON.stringify(body);
 
-          errMsg = `${error.status} - ${error.statusText || ''} ${err}`;
+    //       errMsg = `${error.status} - ${error.statusText || ''} ${err}`;
 
-        } else {
+    //     } else {
 
-          errMsg = error.message ? error.message : error.toString();
+    //       errMsg = error.message ? error.message : error.toString();
 
-        }
+    //     }
 
-        console.error(errMsg);
+    //     console.error(errMsg);
 
-        return Observable.throw(errMsg);
+    //     return Observable.throw(errMsg);
 
       
 
+    // }
+
+    
+
+  public header() {
+
+
+
+    let header = new HttpHeaders({ 'Content-Type': 'application/json' });
+
+
+
+    if (this.helper.isAuthenticated()) {
+
+      header = header.append('Authorization', 'Bearer ' + this.helper.getToken());
+
     }
 
-    
 
-      public header() {
 
-    
+    return { headers: header };
 
-        let header = new HttpHeaders({ 'Content-Type': 'application/json' });
+  }
 
-    
 
-        if(this.helper.isAuthenticated()) {
 
-          header = header.append('Authorization', 'Bearer ' + this.helper.getToken()); 
+  public setToken(data: any) {
 
-        }
 
-    
 
-        return { headers: header };
+    this.helper.setToken(data);
 
-      }
+  }
 
-    
+  public failToken(error: Response | any) {
 
-      public setToken(data:any) {
 
-    
 
-        this.helper.setToken(data);
+    this.helper.failToken();
 
-      }
+    return this.handleError(Response);
 
-      public failToken(error: Response | any) {
-
-    
-
-        this.helper.failToken();
-
-        return this.handleError(Response);
-
-      }
+  }
 
  }

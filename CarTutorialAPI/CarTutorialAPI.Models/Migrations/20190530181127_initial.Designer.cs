@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CarTutorialAPI.Models.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20190511204714_createTableCat")]
-    partial class createTableCat
+    [Migration("20190530181127_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -26,6 +26,10 @@ namespace CarTutorialAPI.Models.Migrations
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<long>("BrandForeignKey");
+
+                    b.Property<long>("CategoryForeignKey");
 
                     b.Property<string>("Contents");
 
@@ -45,7 +49,30 @@ namespace CarTutorialAPI.Models.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("BrandForeignKey");
+
+                    b.HasIndex("CategoryForeignKey");
+
                     b.ToTable("ArticleDB");
+                });
+
+            modelBuilder.Entity("CarTutorialAPI.Models.Brand", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime?>("Created");
+
+                    b.Property<bool>("Deleted");
+
+                    b.Property<string>("Name");
+
+                    b.Property<DateTime?>("Updated");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Brands");
                 });
 
             modelBuilder.Entity("CarTutorialAPI.Models.Category", b =>
@@ -228,6 +255,19 @@ namespace CarTutorialAPI.Models.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("CarTutorialAPI.Models.Article", b =>
+                {
+                    b.HasOne("CarTutorialAPI.Models.Brand", "Brand")
+                        .WithMany()
+                        .HasForeignKey("BrandForeignKey")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("CarTutorialAPI.Models.Category", "Category")
+                        .WithMany()
+                        .HasForeignKey("CategoryForeignKey")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
