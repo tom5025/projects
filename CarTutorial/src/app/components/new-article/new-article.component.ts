@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BrandsService } from 'src/app/services/brands.service';
 
 @Component({
   selector: 'app-new-article',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewArticleComponent implements OnInit {
 
-  constructor() { }
+  public brandList
+
+  constructor(private brandsvc : BrandsService) { 
+    this.brandList = this.brandsvc.GetBrands();    
+  }
 
   ngOnInit() {
   }

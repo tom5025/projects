@@ -20,7 +20,7 @@ export class BrandsService extends BaseService {
 
     public GetBrands ()
     {
-        return this.http.get(this.pathAPI + 'brand');
+        return this.http.get(this.pathAPI + 'brands');
     }
     // public AddArticle(art:Article) {
     //     this.http.post(this.pathAPI + 'article', art);

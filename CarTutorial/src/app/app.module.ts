@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './layout/app.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { UsersComponent } from './components/users/users.component';
 import { Helpers } from './helpers/helpers';
@@ -18,6 +18,8 @@ import { HeadComponent } from './layout/head.component';
 import { BrandListComponent } from './components/brand-list/brand-list.component';
 import { NewArticleComponent } from './components/new-article/new-article.component';
 import { MaterialModule } from './material';
+import { BrandsService } from './services/brands.service';
+import { AppConfig } from './config/config';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,7 @@ import { MaterialModule } from './material';
 
     HttpClientModule
   ],
-  providers: [],
+  providers: [BrandsService, HttpClient, Helpers, AppConfig],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

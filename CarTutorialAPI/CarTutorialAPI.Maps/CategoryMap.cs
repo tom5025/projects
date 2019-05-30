@@ -22,8 +22,8 @@ namespace CarTutorialAPI.Maps
         public List<CategoryViewModel> GetAll()
 
         {
-
-            return DomainToViewModel(service.GetAll());
+            return null;
+            //return DomainToViewModel(service.GetAll());
 
         }
 
@@ -32,18 +32,18 @@ namespace CarTutorialAPI.Maps
         public List<CategoryViewModel> DomainToViewModel(List<Category> domain)
 
         {
+            return null;
+            //List<CategoryViewModel> model = new List<UserViewModel>();
 
-            List<CategoryViewModel> model = new List<UserViewModel>();
+            //foreach (Category of in domain)
 
-            foreach (Category of in domain)
+            //{
 
-            {
+            //    model.Add(DomainToViewModel(of));
 
-                model.Add(DomainToViewModel(of));
+            //}
 
-            }
-
-            return model;
+            //return model;
 
         }
     }

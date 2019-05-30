@@ -1,5 +1,5 @@
 <p>
-  new-article works!
+  new-article
 </p>
 
 <form>
@@ -7,8 +7,8 @@
     <mat-label>
       Marque
     </mat-label>
-    <select required>
-      <option *ngFor="let brand in brandList">{{brand.}}</option>      
-    </select>
+    <mat-select required>
+      <option *ngFor="let brand of brandList" [value]="brand.name">{{brand.name}}</option>      
+    </mat-select>
   </mat-form-field>
 </form>

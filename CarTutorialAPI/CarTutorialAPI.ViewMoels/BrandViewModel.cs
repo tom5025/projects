@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CarTutorialAPI.ViewModels
 {
-    class BrandViewModel
+    public class BrandViewModel
     {
         public string Name { get; set; }
     }

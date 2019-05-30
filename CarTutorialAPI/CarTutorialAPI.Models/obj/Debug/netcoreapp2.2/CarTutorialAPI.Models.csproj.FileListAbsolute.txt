@@ -9,3 +9,13 @@ C:\Users\thomas\source\repos\CarTutorialAPI\CarTutorialAPI.Models\obj\Debug\netc
 C:\Users\thomas\source\repos\CarTutorialAPI\CarTutorialAPI.Models\bin\Debug\netcoreapp2.2\CarTutorialAPI.Models.runtimeconfig.json
 C:\Users\thomas\source\repos\CarTutorialAPI\CarTutorialAPI.Models\bin\Debug\netcoreapp2.2\CarTutorialAPI.Models.runtimeconfig.dev.json
 C:\Users\thomas\source\repos\CarTutorialAPI\CarTutorialAPI.Models\obj\Debug\netcoreapp2.2\CarTutorialAPI.Models.csprojAssemblyReference.cache
+C:\Users\thomas\Source\Repos\projects\CarTutorialAPI\CarTutorialAPI.Models\bin\Debug\netcoreapp2.2\CarTutorialAPI.Models.deps.json
+C:\Users\thomas\Source\Repos\projects\CarTutorialAPI\CarTutorialAPI.Models\bin\Debug\netcoreapp2.2\CarTutorialAPI.Models.runtimeconfig.json
+C:\Users\thomas\Source\Repos\projects\CarTutorialAPI\CarTutorialAPI.Models\bin\Debug\netcoreapp2.2\CarTutorialAPI.Models.runtimeconfig.dev.json
+C:\Users\thomas\Source\Repos\projects\CarTutorialAPI\CarTutorialAPI.Models\bin\Debug\netcoreapp2.2\CarTutorialAPI.Models.dll
+C:\Users\thomas\Source\Repos\projects\CarTutorialAPI\CarTutorialAPI.Models\bin\Debug\netcoreapp2.2\CarTutorialAPI.Models.pdb
+C:\Users\thomas\Source\Repos\projects\CarTutorialAPI\CarTutorialAPI.Models\obj\Debug\netcoreapp2.2\CarTutorialAPI.Models.csproj.CoreCompileInputs.cache
+C:\Users\thomas\Source\Repos\projects\CarTutorialAPI\CarTutorialAPI.Models\obj\Debug\netcoreapp2.2\CarTutorialAPI.Models.AssemblyInfoInputs.cache
+C:\Users\thomas\Source\Repos\projects\CarTutorialAPI\CarTutorialAPI.Models\obj\Debug\netcoreapp2.2\CarTutorialAPI.Models.AssemblyInfo.cs
+C:\Users\thomas\Source\Repos\projects\CarTutorialAPI\CarTutorialAPI.Models\obj\Debug\netcoreapp2.2\CarTutorialAPI.Models.dll
+C:\Users\thomas\Source\Repos\projects\CarTutorialAPI\CarTutorialAPI.Models\obj\Debug\netcoreapp2.2\CarTutorialAPI.Models.pdb

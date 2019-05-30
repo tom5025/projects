@@ -8,8 +8,7 @@
     ".NETCoreApp,Version=v2.2": {
       "CarTutorialAPI.Repositories/1.0.0": {
         "dependencies": {
-          "CarTutorialAPI.Models": "1.0.0",
-          "Microsoft.AspNetCore.Hosting": "2.1.1.0"
+          "CarTutorialAPI.Models": "1.0.0"
         },
         "runtime": {
           "CarTutorialAPI.Repositories.dll": {}
@@ -884,14 +883,6 @@
         "runtime": {
           "CarTutorialAPI.Models.dll": {}
         }
-      },
-      "Microsoft.AspNetCore.Hosting/2.1.1.0": {
-        "runtime": {
-          "Microsoft.AspNetCore.Hosting.dll": {
-            "assemblyVersion": "2.1.1.0",
-            "fileVersion": "2.1.1.18157"
-          }
-        }
       }
     }
   },
@@ -1498,11 +1489,6 @@
     },
     "CarTutorialAPI.Models/1.0.0": {
       "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Microsoft.AspNetCore.Hosting/2.1.1.0": {
-      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }
