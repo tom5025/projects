@@ -1,3 +1,14 @@
 <p>
   new-article works!
 </p>
+
+<form>
+  <mat-form-field>
+    <mat-label>
+      Marque
+    </mat-label>
+    <select required>
+      <option *ngFor="let brand in brandList">{{brand.}}</option>      
+    </select>
+  </mat-form-field>
+</form>
