@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BrandsService } from 'src/app/services/brands.service';
+import { CatsService } from 'src/app/services/cats.service';
 
 @Component({
   selector: 'app-new-article',
@@ -9,8 +10,9 @@ import { BrandsService } from 'src/app/services/brands.service';
 export class NewArticleComponent implements OnInit {
 
   public BrandList : any = [];
+  public CatList : any = [];
 
-  constructor(private brandsvc : BrandsService) { 
+  constructor(private brandsvc : BrandsService , private catsvc : CatsService) { 
     
   }
 
@@ -18,7 +20,13 @@ export class NewArticleComponent implements OnInit {
     this.brandsvc.GetBrands().subscribe({
       next: (data : {}) => { 
         this.BrandList = data;
-        console.log(data); }
+        }
+    })
+
+    this.catsvc.GetCats().subscribe({
+      next: (data :{}) => {
+        this.CatList = data;
+      }
     })
   }
 

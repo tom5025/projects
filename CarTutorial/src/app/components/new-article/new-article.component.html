@@ -11,6 +11,14 @@
       <mat-option *ngFor="let brand of BrandList" [value]="brand.name">{{brand.name}}</mat-option>      
     </mat-select>
   </mat-form-field>
+  <mat-form-field>
+    <mat-label>
+      Catégorie
+    </mat-label>
+    <mat-select required>
+      <mat-option *ngFor="let cat of CatList" [value]="cat.name">{{cat.name}}</mat-option>      
+    </mat-select>
+  </mat-form-field>
 </form>
   <!-- <div class="request-list" *ngFor="let brand of BrandList">
     <span>{{ brand.name }}</span>

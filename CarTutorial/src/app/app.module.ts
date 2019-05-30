@@ -20,6 +20,7 @@ import { NewArticleComponent } from './components/new-article/new-article.compon
 import { MaterialModule } from './material';
 import { BrandsService } from './services/brands.service';
 import { AppConfig } from './config/config';
+import { CatsService } from './services/cats.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,7 @@ import { AppConfig } from './config/config';
 
     HttpClientModule
   ],
-  providers: [BrandsService, HttpClient, Helpers, AppConfig],
+  providers: [BrandsService, CatsService, HttpClient, Helpers, AppConfig],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
