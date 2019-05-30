@@ -11,6 +11,8 @@ import { LogoutComponent }   from './components/login/logout.component';
 import { DashboardComponent }   from './components/dashboard/dashboard.component';
 
 import { UsersComponent }      from './components/users/users.component';
+import { NewArticleComponent } from './components/new-article/new-article.component';
+import { BrandListComponent } from './components/brand-list/brand-list.component';
 
 const routes: Routes = [
 
@@ -22,7 +24,9 @@ const routes: Routes = [
 
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
 
-  { path: 'users', component: UsersComponent,canActivate: [AuthGuard] }
+  { path: 'users', component: UsersComponent,canActivate: [AuthGuard] },
+  { path :'new-article', component : NewArticleComponent },
+  { path:'brand-list', component : BrandListComponent }
 
 ];
 

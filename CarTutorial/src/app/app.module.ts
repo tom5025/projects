@@ -17,7 +17,6 @@ import { AuthGuard } from './helpers/canActivateAuthGuard';
 import { HeadComponent } from './layout/head.component';
 import { BrandListComponent } from './components/brand-list/brand-list.component';
 import { NewArticleComponent } from './components/new-article/new-article.component';
-import { LeftPanelComponent } from './layout/left-panel.component';
 import { MaterialModule } from './material';
 
 @NgModule({
@@ -28,7 +27,6 @@ import { MaterialModule } from './material';
     UsersComponent,
     BrandListComponent,
     NewArticleComponent,
-    LeftPanelComponent
   ],
   imports: [
     BrowserModule,
