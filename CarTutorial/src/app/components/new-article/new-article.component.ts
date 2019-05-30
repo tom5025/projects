@@ -15,7 +15,7 @@ export class NewArticleComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.BrandList = this.brandsvc.GetBrands().subscribe({
+    this.brandsvc.GetBrands().subscribe({
       next: (data : {}) => { 
         this.BrandList = data;
         console.log(data); }
