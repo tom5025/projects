@@ -7,10 +7,10 @@
 </template>
 <script>
 export default {
-  name: "home",
+  name: "testView",
   data() {
     return {
-      title: "Home",
+      title: "testView",
       products: [
         {
           productTitle: "ABCN",

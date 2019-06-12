@@ -4,10 +4,8 @@
       <v-data-table
               :headers='headers'
               :items='items'
-              :length='pages'
-              :search='search'
-              :pagination.sync='pagination'
-              :total-items='totalItemCount'
+              :length='1'              
+              :pagination.sync='pagination'              
               class='elevation-1'
       >
           <template slot='items' slot-scope='props'>          
@@ -18,7 +16,7 @@
   </template>
 <script>
   import BeerService from '../services/BeerService';
-  
+
   export default{
       name:"BeerView",
       data: () => ({
@@ -27,7 +25,7 @@
           const skip = (this.pagination.page - 1) * rowsPerPage
           let svc = new BeerService();
           const res = await svc.getBeers(skip,rowsPerPage,"Extra Malt", 7);
-          this.items = res.data.data;
+          this.items = res.data.data;          
         },        
         search: '',
         // totalItems: 0,
