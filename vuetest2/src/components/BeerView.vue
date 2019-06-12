@@ -1,5 +1,3 @@
-import BeerService from '../services/BeerService'
-
 <template>
   <div class="BeerView">
       <div>Beer list</div>
@@ -19,6 +17,8 @@ import BeerService from '../services/BeerService'
   </div>
   </template>
 <script>
+  import BeerService from '../services/BeerService';
+  
   export default{
       name:"BeerView",
       data: () => ({

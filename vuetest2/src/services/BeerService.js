@@ -2,7 +2,7 @@
 
 import Axios from 'axios';
 
-export class BeerService
+export default class BeerService
 {
     getBeers (skip, rowsPerPage, maltType, alcoholByVol)
     {
