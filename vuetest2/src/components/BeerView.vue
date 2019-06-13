@@ -18,7 +18,7 @@
               <td class='text-xs-left'>{{ props.item.name }}</td> 
               <td class='text-xs-left'>{{ props.item.abv }}</td>
               <td class='text-xs-left'>{{ props.item.tagline}}</td> 
-              <td><img :src='props.item.image_url' /></td>             
+              <td><img class='row col-md-1 thumbnail img-responsive img-fluid' :src='props.item.image_url' /></td>             
           </template>
       </v-data-table>
   </div>
