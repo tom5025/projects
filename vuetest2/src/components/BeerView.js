@@ -1,33 +1,29 @@
 import BeerService from '../services/BeerService';
 
-
-
+async function LoadData(ctx) {
+    let svc = new BeerService();
+    const res = await svc.getBeers(ctx.pagination.page, ctx.pagination.rowsPerPage, ctx.maltType, ctx.switchOnlyAboveSevenPct ? 7 : 0);
+    ctx.items = res.data;
+}
 
 export default{
       name:"BeerView",
-      
       watch:
       {
           async switchOnlyAboveSevenPct(newValue){
             this.pagination.page = 1;
-            let svc = new BeerService();
-            const res = await svc.getBeers(this.pagination.page,this.pagination.rowsPerPage,this.maltType, this.switchOnlyAboveSevenPct?7:0);          
-            this.items = res.data;
+            await LoadData(this);
           },
           pagination:
           {
             async handler()
             {
-              let svc = new BeerService();
-              const res = await svc.getBeers(this.pagination.page,this.pagination.rowsPerPage,this.maltType, this.switchOnlyAboveSevenPct?7:0);          
-              this.items = res.data;  
+              await LoadData(this);  
             }
           }
       },
       async mounted () {          
-          let svc = new BeerService();
-          const res = await svc.getBeers(this.pagination.page,this.pagination.rowsPerPage,this.maltType, this.switchOnlyAboveSevenPct?7:0);          
-          this.items = res.data;          
+          await LoadData(this);          
       },
       computed: {
             pages() {
@@ -49,7 +45,8 @@ export default{
         headers: [   
           { text: 'Name', value: 'name' },     
           { text: 'Alcohol by volume', value:'abv'},
-          { text: 'tagline', value:'tagline'}
+          { text: 'tagline', value:'tagline'},
+          { text: '', value:'image_url'}
         ],
         //switch        
         switchOnlyAboveSevenPct:false,  
