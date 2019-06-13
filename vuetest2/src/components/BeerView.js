@@ -1,5 +1,9 @@
 import BeerService from '../services/BeerService';
 
+/**
+ * Load data from the beer service
+ * @param {view data} ctx context
+ */
 async function LoadData(ctx) {
     let svc = new BeerService();
     const res = await svc.getBeers(ctx.pagination.page, ctx.pagination.rowsPerPage, ctx.maltType, ctx.switchOnlyAboveSevenPct ? 7 : 0);
