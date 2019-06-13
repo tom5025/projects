@@ -13,7 +13,14 @@ import Vuetify, {
     VFooter,
     // eslint-disable-next-line sort-imports
     VFadeTransition,
-    VDataTable
+    VDataTable,
+    VSwitch,
+    VCheckbox,
+    VToolbarSideIcon,
+    VToolbarTitle,
+    VSpacer,
+    VToolbarItems,
+    VBtn
 } from 'vuetify/lib';
 import { Ripple } from 'vuetify/lib/directives';
 import 'vuetify/dist/vuetify.min.css' // Ensure you are using css-loader
@@ -25,7 +32,14 @@ Vue.use(Vuetify, {
         VFooter,
         VToolbar,
         VFadeTransition,
-        VDataTable
+        VDataTable,
+        VSwitch,
+        VCheckbox,
+        VToolbarSideIcon,
+        VToolbarTitle,
+        VSpacer,
+        VToolbarItems,
+        VBtn
     }
     ,
     directives: {

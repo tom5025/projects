@@ -1,41 +1,27 @@
 <template>
   <div class="BeerView">
       <div>Beer list</div>
+      <v-switch
+        v-model="switchOnlyAboveSevenPct"
+        :label="`Only 7% volume : ${switchOnlyAboveSevenPct.toString()}`"        
+      >
+      </v-switch>
       <v-data-table
               :headers='headers'
               :items='items'
-              :length='1'              
+              :length='pages'              
               :pagination.sync='pagination'              
+              :total-items="totalItemCount"
               class='elevation-1'
       >
           <template slot='items' slot-scope='props'>          
-              <td class='text-xs-right'>{{ props.item.name }}</td>            
+              <td class='text-xs-left'>{{ props.item.name }}</td> 
+              <td class='text-xs-left'>{{ props.item.abv }}</td>
+              <td class='text-xs-left'>{{ props.item.tagline}}</td>              
           </template>
       </v-data-table>
   </div>
   </template>
-<script>
-  import BeerService from '../services/BeerService';
-
-  export default{
-      name:"BeerView",
-      data: () => ({
-        async mounted () {
-          const rowsPerPage = this.pagination.rowsPerPage
-          const skip = (this.pagination.page - 1) * rowsPerPage
-          let svc = new BeerService();
-          const res = await svc.getBeers(skip,rowsPerPage,"Extra Malt", 7);
-          this.items = res.data.data;          
-        },        
-        search: '',
-        // totalItems: 0,
-        items: [],
-        pagination: {
-          sortBy: 'name'
-        },
-        headers: [   
-          { text: 'Name', value: 'name' },      
-        ]     
-      })
-  }
+<script src="./BeerView.js">
+  
 </script>
