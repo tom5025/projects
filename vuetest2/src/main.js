@@ -2,6 +2,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
+
 // Import Vue App, routes, store
 import App from './App';
 import routes from './routes';
@@ -9,11 +10,13 @@ import Vuetify, {
     VApp, // required
     VNavigationDrawer,
     VToolbar,
+    VFooter,
     // eslint-disable-next-line sort-imports
     VFadeTransition,
     VDataTable
 } from 'vuetify/lib';
 import { Ripple } from 'vuetify/lib/directives';
+import 'vuetify/dist/vuetify.min.css' // Ensure you are using css-loader
 
 Vue.use(Vuetify, {
     components: {
@@ -21,7 +24,8 @@ Vue.use(Vuetify, {
         VNavigationDrawer,        
         VFooter,
         VToolbar,
-        VFadeTransition
+        VFadeTransition,
+        VDataTable
     }
     ,
     directives: {

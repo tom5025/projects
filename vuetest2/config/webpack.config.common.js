@@ -52,7 +52,11 @@ const webpackConfig = {
                     { loader: 'css-loader', options: { sourceMap: isDev } },
                     { loader: 'sass-loader', options: { sourceMap: isDev } }
                 ]
-            }
+            },
+            {
+                test: /\.styl$/,
+                loader: ['style-loader', 'css-loader', 'stylus-loader']
+            }        
         ]
     },
     plugins: [
