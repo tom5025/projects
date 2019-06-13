@@ -3,7 +3,7 @@
       <div>Beer list</div>
       <v-switch
         v-model="switchOnlyAboveSevenPct"
-        :label="`Only 7% volume`"        
+        :label="`Only 7% and above AbV`"        
       >
       </v-switch>
       <v-data-table
