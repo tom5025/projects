@@ -10,9 +10,14 @@
 
 <script>
   export default {
+    created()
+    {
+      console.log(this.$brandSvc !== null);
+      this.brandList = this.$brandSvc.getBrands();
+    },
     data: () =>
     ({
-      brandList: this.$brandSvc.getBrands()
+      brandList: []
     })
   }
 </script>

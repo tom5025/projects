@@ -20,6 +20,7 @@ Vue.config.productionTip = false;
 const brandSvc = newBrandServiceMock();
 
 new Vue({
+  mixins:[],
   router,
   store,
   brandSvc,
