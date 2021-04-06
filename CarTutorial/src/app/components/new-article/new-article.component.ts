@@ -9,25 +9,25 @@ import { CatsService } from 'src/app/services/cats.service';
 })
 export class NewArticleComponent implements OnInit {
 
-  public BrandList : any = [];
-  public CatList : any = [];
+  public BrandList: any = [];
+  public CatList: any = [];
 
-  constructor(private brandsvc : BrandsService , private catsvc : CatsService) { 
-    
+  constructor(private brandsvc: BrandsService , private catsvc: CatsService) {
+
   }
 
   ngOnInit() {
     this.brandsvc.GetBrands().subscribe({
-      next: (data : {}) => { 
+      next: (data: {}) => {
         this.BrandList = data;
         }
-    })
+    });
 
     this.catsvc.GetCats().subscribe({
-      next: (data :{}) => {
+      next: (data: {}) => {
         this.CatList = data;
       }
-    })
+    });
   }
 
 }

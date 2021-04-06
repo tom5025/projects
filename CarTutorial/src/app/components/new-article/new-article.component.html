@@ -3,26 +3,37 @@
 </p>
 
 <form>
-  <div>
-    <mat-form-field>
-      <mat-label>
-        Brand
-      </mat-label>
-      <mat-select required>
-        <mat-option *ngFor="let brand of BrandList" [value]="brand.name">{{brand.name}}</mat-option>
-      </mat-select>
-    </mat-form-field>
-  </div>
-  <div>
-    <mat-form-field>
-      <mat-label>
-        Category
-      </mat-label>
-      <mat-select required>
-        <mat-option *ngFor="let cat of CatList" [value]="cat.name">{{cat.name}}</mat-option>
-      </mat-select>
-    </mat-form-field>
-  </div>
+  <mat-card>
+    <mat-card-content>
+      <mat-form-field>
+        <mat-label>
+          Brand
+        </mat-label>
+        <mat-select required>
+          <mat-option *ngFor="let brand of BrandList" [value]="brand.name">{{brand.name}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>
+          Category
+        </mat-label>
+        <mat-select required>
+          <mat-option *ngFor="let cat of CatList" [value]="cat.name">{{cat.name}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>
+          Contents
+        </mat-label>
+        <textarea matInput></textarea>
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" [disabled]="true">Create</button>
+      <button type="button" mat-raised-button color="warn" (click)="onCancel()">Cancel</button>
+    </mat-card-actions>
+  </mat-card>
 </form>
 <!-- <div class="request-list" *ngFor="let brand of BrandList">
     <span>{{ brand.name }}</span>
