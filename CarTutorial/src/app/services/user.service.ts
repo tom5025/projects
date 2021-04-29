@@ -1,0 +1,31 @@
+import { Injectable } from '@angular/core';
+
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
+import { Observable } from 'rxjs';
+
+import { catchError, map, tap } from 'rxjs/operators';
+
+import { BaseService } from './base.service';
+
+import { User } from '../models/user';
+
+import { AppConfig } from '../config/config';
+
+import { Helpers } from '../helpers/helpers';
+
+@Injectable()
+
+export class UserService extends BaseService {
+
+
+  /** GET heroes from the server */
+
+  getUsers (): Observable<User[]> {
+
+    return this.http.get(this.pathAPI + 'user', super.header()).pipe(
+
+    catchError(super.handleError)) as Observable<User[]>;
+
+   }
+}

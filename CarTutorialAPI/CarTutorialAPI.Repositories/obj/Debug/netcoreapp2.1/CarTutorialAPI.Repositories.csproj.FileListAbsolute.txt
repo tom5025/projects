@@ -1,0 +1,14 @@
+C:\Users\thomas\source\repos\CarTutorialAPI\CarTutorialAPI.Repositories\obj\Debug\netcoreapp2.1\CarTutorialAPI.Repositories.csproj.CoreCompileInputs.cache
+C:\Users\thomas\source\repos\CarTutorialAPI\CarTutorialAPI.Repositories\obj\Debug\netcoreapp2.1\CarTutorialAPI.Repositories.AssemblyInfoInputs.cache
+C:\Users\thomas\source\repos\CarTutorialAPI\CarTutorialAPI.Repositories\obj\Debug\netcoreapp2.1\CarTutorialAPI.Repositories.AssemblyInfo.cs
+C:\Users\thomas\source\repos\CarTutorialAPI\CarTutorialAPI.Repositories\obj\Debug\netcoreapp2.1\CarTutorialAPI.Repositories.csprojAssemblyReference.cache
+C:\Users\thomas\source\repos\CarTutorialAPI\CarTutorialAPI.Repositories\bin\Debug\netcoreapp2.1\CarTutorialAPI.Repositories.deps.json
+C:\Users\thomas\source\repos\CarTutorialAPI\CarTutorialAPI.Repositories\bin\Debug\netcoreapp2.1\CarTutorialAPI.Repositories.dll
+C:\Users\thomas\source\repos\CarTutorialAPI\CarTutorialAPI.Repositories\bin\Debug\netcoreapp2.1\CarTutorialAPI.Repositories.pdb
+C:\Users\thomas\source\repos\CarTutorialAPI\CarTutorialAPI.Repositories\bin\Debug\netcoreapp2.1\CarTutorialAPI.Models.dll
+C:\Users\thomas\source\repos\CarTutorialAPI\CarTutorialAPI.Repositories\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Hosting.dll
+C:\Users\thomas\source\repos\CarTutorialAPI\CarTutorialAPI.Repositories\bin\Debug\netcoreapp2.1\CarTutorialAPI.Models.pdb
+C:\Users\thomas\source\repos\CarTutorialAPI\CarTutorialAPI.Repositories\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Hosting.xml
+C:\Users\thomas\source\repos\CarTutorialAPI\CarTutorialAPI.Repositories\obj\Debug\netcoreapp2.1\CarTutorialAPI.Repositories.csproj.CopyComplete
+C:\Users\thomas\source\repos\CarTutorialAPI\CarTutorialAPI.Repositories\obj\Debug\netcoreapp2.1\CarTutorialAPI.Repositories.dll
+C:\Users\thomas\source\repos\CarTutorialAPI\CarTutorialAPI.Repositories\obj\Debug\netcoreapp2.1\CarTutorialAPI.Repositories.pdb

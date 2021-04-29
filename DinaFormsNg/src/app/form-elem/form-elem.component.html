@@ -1,0 +1,7 @@
+<div [formGroup]="form">
+  <label [attr.for]="elem.key">{{elem.desc}}</label>
+    <input [formControlName]="elem.key" [id]="elem.key">
+  </div> 
+
+  <div class="errorMessage" *ngIf="!isValid">{{elem.label}} est obligatoire</div>
+</div>

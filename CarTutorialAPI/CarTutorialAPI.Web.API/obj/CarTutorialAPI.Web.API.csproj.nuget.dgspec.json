@@ -1,0 +1,395 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.Web.API\\CarTutorialAPI.Web.API.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.Maps\\CarTutorialAPI.Maps.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.Maps\\CarTutorialAPI.Maps.csproj",
+        "projectName": "CarTutorialAPI.Maps",
+        "projectPath": "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.Maps\\CarTutorialAPI.Maps.csproj",
+        "packagesPath": "C:\\Users\\thomas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.Maps\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\thomas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.Services\\CarTutorialAPI.Services.csproj": {
+                "projectPath": "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.Services\\CarTutorialAPI.Services.csproj"
+              },
+              "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.ViewMoels\\CarTutorialAPI.ViewModels.csproj": {
+                "projectPath": "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.ViewMoels\\CarTutorialAPI.ViewModels.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.Models\\CarTutorialAPI.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.Models\\CarTutorialAPI.Models.csproj",
+        "projectName": "CarTutorialAPI.Models",
+        "projectPath": "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.Models\\CarTutorialAPI.Models.csproj",
+        "packagesPath": "C:\\Users\\thomas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\thomas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.2.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[2.2.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[2.2.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.4, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.Repositories\\CarTutorialAPI.Repositories.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.Repositories\\CarTutorialAPI.Repositories.csproj",
+        "projectName": "CarTutorialAPI.Repositories",
+        "projectPath": "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.Repositories\\CarTutorialAPI.Repositories.csproj",
+        "packagesPath": "C:\\Users\\thomas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.Repositories\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\thomas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.Models\\CarTutorialAPI.Models.csproj": {
+                "projectPath": "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.Models\\CarTutorialAPI.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.Services\\CarTutorialAPI.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.Services\\CarTutorialAPI.Services.csproj",
+        "projectName": "CarTutorialAPI.Services",
+        "projectPath": "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.Services\\CarTutorialAPI.Services.csproj",
+        "packagesPath": "C:\\Users\\thomas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\thomas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.Repositories\\CarTutorialAPI.Repositories.csproj": {
+                "projectPath": "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.Repositories\\CarTutorialAPI.Repositories.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.ViewMoels\\CarTutorialAPI.ViewModels.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.ViewMoels\\CarTutorialAPI.ViewModels.csproj",
+        "projectName": "CarTutorialAPI.ViewModels",
+        "projectPath": "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.ViewMoels\\CarTutorialAPI.ViewModels.csproj",
+        "packagesPath": "C:\\Users\\thomas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.ViewMoels\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\thomas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.Web.API\\CarTutorialAPI.Web.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.Web.API\\CarTutorialAPI.Web.API.csproj",
+        "projectName": "CarTutorialAPI.Web.API",
+        "projectPath": "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.Web.API\\CarTutorialAPI.Web.API.csproj",
+        "packagesPath": "C:\\Users\\thomas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.Web.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\thomas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.Maps\\CarTutorialAPI.Maps.csproj": {
+                "projectPath": "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.Maps\\CarTutorialAPI.Maps.csproj"
+              },
+              "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.Models\\CarTutorialAPI.Models.csproj": {
+                "projectPath": "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.Models\\CarTutorialAPI.Models.csproj"
+              },
+              "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.ViewMoels\\CarTutorialAPI.ViewModels.csproj": {
+                "projectPath": "C:\\Users\\thomas\\Source\\Repos\\projects\\CarTutorialAPI\\CarTutorialAPI.ViewMoels\\CarTutorialAPI.ViewModels.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.2.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[2.2.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.4, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.2.3, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

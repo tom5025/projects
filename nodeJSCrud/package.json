@@ -1,0 +1,12 @@
+{
+  "name": "nodejscrud",
+  "version": "1.0.0",
+  "description": "node js crud test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "thomas remy",
+  "license": "ISC",
+  "dependencies": {}
+}
