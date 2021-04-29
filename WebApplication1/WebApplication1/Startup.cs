@@ -46,7 +46,13 @@ namespace WebApplication1
                     {
                         c.Token = c.Request.Cookies["sessiontoken"];
                         return Task.CompletedTask;
-                    },                    
+                    },                   
+                    OnChallenge = c =>
+                    {
+                        c.Response.Redirect("/Login/Index");
+                        c.HandleResponse();
+                        return Task.FromResult(0);
+                    },
                     OnAuthenticationFailed = c =>
                     {
                         c.NoResult();

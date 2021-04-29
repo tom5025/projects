@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="df782ef409324ffc81176ca557c9d5ae" Name="Diagram1" >
+        <EntityTypeShape EntityType="StocksDataModel.Articles" Width="1.5" PointX="3.75" PointY="2.375" />
+        <EntityTypeShape EntityType="StocksDataModel.StockPlaces" Width="1.5" PointX="4.875" PointY="0.5" />
+        <EntityTypeShape EntityType="StocksDataModel.Mvts" Width="1.5" PointX="7.25" PointY="4.5" />
+        <EntityTypeShape EntityType="StocksDataModel.Lots" Width="1.5" PointX="0.875" PointY="0.5" />
+        <AssociationConnector Association="StocksDataModel.ArticlesLots" />
+        <AssociationConnector Association="StocksDataModel.ArticlesStockPlaces" />
+        <AssociationConnector Association="StocksDataModel.ArticlesMvts" />
+        <EntityTypeShape EntityType="StocksDataModel.ArtSuppliers" Width="1.5" PointX="7.625" PointY="2.625" />
+        <EntityTypeShape EntityType="StocksDataModel.Clients" Width="1.5" PointX="0.5" PointY="4.625" />
+        <EntityTypeShape EntityType="StocksDataModel.Ords" Width="1.5" PointX="2.375" PointY="5.5" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
